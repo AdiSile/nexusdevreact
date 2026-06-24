@@ -9,44 +9,49 @@
 export interface SocialLink {
   platform: string;
   url: string;
-  label?: string;
-  icon?: string;
+  label?: string | undefined;
+  icon?: string | undefined;
 }
 
 export interface SeoMeta {
   title: string;
   description: string;
-  keywords?: readonly string[];
-  ogImage?: string;
-  ogType?: "website" | "article";
-  twitterCard?: "summary" | "summary_large_image" | "app" | "player";
-  twitterHandle?: string;
+  keywords?: readonly string[] | undefined;
+  ogImage?: string | undefined;
+  ogType?: "website" | "article" | undefined;
+  twitterCard?:
+    | "summary"
+    | "summary_large_image"
+    | "app"
+    | "player"
+    | undefined;
+  twitterHandle?: string | undefined;
 }
 
 export interface NavigationItem {
   label: string;
   href: string;
-  children?: readonly NavigationItem[];
+  children?: readonly NavigationItem[] | undefined;
 }
 
 export interface Settings {
   siteName: string;
   tagline: string;
   description: string;
-  logoUrl?: string;
-  faviconUrl?: string;
+  logoUrl?: string | undefined;
+  faviconUrl?: string | undefined;
   primaryColor: string;
   secondaryColor: string;
   email: string;
-  phone?: string;
-  address?: string;
+  phone?: string | undefined;
+  address?: string | undefined;
   socialLinks: readonly SocialLink[];
   navigation: readonly NavigationItem[];
   seo: SeoMeta;
-  footerText?: string;
-  googleAnalyticsId?: string;
+  footerText?: string | undefined;
+  googleAnalyticsId?: string | undefined;
   locale: string;
-  timezone?: string;
+  timezone?: string | undefined;
 }
 
 // ═══════════════════════════════════════════════
@@ -56,7 +61,7 @@ export interface Settings {
 export interface ServiceFeature {
   id: string;
   label: string;
-  description?: string;
+  description?: string | undefined;
 }
 
 export interface ServicePricingTier {
@@ -181,26 +186,31 @@ export interface ContactMessage {
   id: string;
   name: string;
   email: string;
-  phone?: string;
-  company?: string;
-  subject?: string;
+  phone?: string | undefined;
+  company?: string | undefined;
+  subject?: string | undefined;
   message: string;
-  serviceInterestIds?: readonly string[];
-  budgetRange?: string;
-  timeline?: string;
+  serviceInterestIds?: readonly string[] | undefined;
+  budgetRange?: string | undefined;
+  timeline?: string | undefined;
   status: ContactMessageStatus;
-  ipAddress?: string;
-  userAgent?: string;
+  ipAddress?: string | undefined;
+  userAgent?: string | undefined;
   createdAt: string;
-  readAt?: string;
-  repliedAt?: string;
+  readAt?: string | undefined;
+  repliedAt?: string | undefined;
 }
 
 // ═══════════════════════════════════════════════
 // 7. GlobalPromo — Banner promoțional global
 // ═══════════════════════════════════════════════
 
-export type PromoStyle = "info" | "success" | "warning" | "highlight" | "gradient";
+export type PromoStyle =
+  | "info"
+  | "success"
+  | "warning"
+  | "highlight"
+  | "gradient";
 
 export interface PromoAction {
   label: string;
@@ -231,10 +241,10 @@ export interface GlobalPromo {
 /** Răspuns standard de la API */
 export interface ApiResponse<T = unknown> {
   success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-  statusCode?: number;
+  data?: T | undefined;
+  error?: string | undefined;
+  message?: string | undefined;
+  statusCode?: number | undefined;
 }
 
 /** Paginare */
@@ -256,28 +266,28 @@ export interface PaginatedResponse<T = unknown> {
 export interface ContactFormInput {
   name: string;
   email: string;
-  phone?: string;
-  company?: string;
-  subject?: string;
+  phone?: string | undefined;
+  company?: string | undefined;
+  subject?: string | undefined;
   message: string;
-  serviceInterestIds?: readonly string[];
-  budgetRange?: string;
-  timeline?: string;
+  serviceInterestIds?: readonly string[] | undefined;
+  budgetRange?: string | undefined;
+  timeline?: string | undefined;
 }
 
 /** Înregistrare newsletter */
 export interface NewsletterSubscription {
   email: string;
-  name?: string;
+  name?: string | undefined;
   subscribedAt: string;
   isActive: boolean;
-  unsubscribedAt?: string;
+  unsubscribedAt?: string | undefined;
 }
 
 /** Coordonate geografice / hartă */
 export interface MapCoordinates {
   lat: number;
   lng: number;
-  zoom?: number;
-  label?: string;
+  zoom?: number | undefined;
+  label?: string | undefined;
 }

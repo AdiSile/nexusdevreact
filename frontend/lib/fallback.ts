@@ -110,19 +110,15 @@ export const fallbackSettings: NexusSettings = {
       id: '1',
       slug: 'web-development-full-stack',
       title: 'Web Development Full-Stack',
-      subtitle: undefined,
       description:
         'Aplicații web complete: React / Next.js frontend, Node.js / Express backend, baze de date SQL/NoSQL, autentificare, API-uri RESTful, deploy.',
-      longDescription: undefined,
       icon: 'fa-code',
-      imageUrl: undefined,
       features: [
         { id: 'f1-1', label: 'Arhitectură full-stack modernă' },
         { id: 'f1-2', label: 'Autentificare & autorizare' },
         { id: 'f1-3', label: 'API RESTful robust' },
         { id: 'f1-4', label: 'Deploy & CI/CD inclus' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -136,8 +132,6 @@ export const fallbackSettings: NexusSettings = {
             'Deploy & CI/CD inclus',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -164,19 +158,15 @@ export const fallbackSettings: NexusSettings = {
       id: '2',
       slug: 'e-commerce-platform',
       title: 'E-Commerce Platform',
-      subtitle: undefined,
       description:
         'Magazine online personalizate cu coș de cumpărături, plăți integrate (Stripe/PayPal), dashboard admin și management produse.',
-      longDescription: undefined,
       icon: 'fa-shopping-cart',
-      imageUrl: undefined,
       features: [
         { id: 'f2-1', label: 'Coș & checkout securizat' },
         { id: 'f2-2', label: 'Integrare plăți Stripe/PayPal' },
         { id: 'f2-3', label: 'Dashboard admin complet' },
         { id: 'f2-4', label: 'Optimizare SEO e-commerce' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -190,8 +180,6 @@ export const fallbackSettings: NexusSettings = {
             'Optimizare SEO e-commerce',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -218,19 +206,15 @@ export const fallbackSettings: NexusSettings = {
       id: '3',
       slug: 'mobile-app-development',
       title: 'Mobile App Development',
-      subtitle: undefined,
       description:
         'Aplicații mobile hibride React Native sau PWA performante, publicate în App Store și Google Play.',
-      longDescription: undefined,
       icon: 'fa-mobile-alt',
-      imageUrl: undefined,
       features: [
         { id: 'f3-1', label: 'React Native / PWA' },
         { id: 'f3-2', label: 'Publicare App Store & Google Play' },
         { id: 'f3-3', label: 'Notificări push' },
         { id: 'f3-4', label: 'Sincronizare în timp real' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -244,8 +228,6 @@ export const fallbackSettings: NexusSettings = {
             'Sincronizare în timp real',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -272,19 +254,15 @@ export const fallbackSettings: NexusSettings = {
       id: '4',
       slug: 'custom-cms-development',
       title: 'Custom CMS Development',
-      subtitle: undefined,
       description:
         'Sisteme de management al conținutului construite pe măsură, cu interfață administrativă intuitivă și roluri de utilizator.',
-      longDescription: undefined,
       icon: 'fa-file-alt',
-      imageUrl: undefined,
       features: [
         { id: 'f4-1', label: 'Interfață admin custom' },
         { id: 'f4-2', label: 'Roluri & permisiuni' },
         { id: 'f4-3', label: 'Editor WYSIWYG integrat' },
         { id: 'f4-4', label: 'API headless opțional' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -298,8 +276,6 @@ export const fallbackSettings: NexusSettings = {
             'API headless opțional',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -326,19 +302,15 @@ export const fallbackSettings: NexusSettings = {
       id: '5',
       slug: 'saas-platform-development',
       title: 'SaaS Platform Development',
-      subtitle: undefined,
       description:
         'Platforme Software-as-a-Service complete: facturare, abonamente, multi-tenancy, dashboard analytics.',
-      longDescription: undefined,
       icon: 'fa-cloud',
-      imageUrl: undefined,
       features: [
         { id: 'f5-1', label: 'Arhitectură multi-tenant' },
         { id: 'f5-2', label: 'Sistem abonamente & facturare' },
         { id: 'f5-3', label: 'Dashboard analytics' },
         { id: 'f5-4', label: 'Scalare cloud automată' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -352,8 +324,6 @@ export const fallbackSettings: NexusSettings = {
             'Scalare cloud automată',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -380,19 +350,15 @@ export const fallbackSettings: NexusSettings = {
       id: '6',
       slug: 'api-development-integration',
       title: 'API Development & Integration',
-      subtitle: undefined,
       description:
         'Proiectare și implementare API-uri RESTful / GraphQL, documentație OpenAPI/Swagger, integrare servicii terțe.',
-      longDescription: undefined,
       icon: 'fa-plug',
-      imageUrl: undefined,
       features: [
         { id: 'f6-1', label: 'RESTful / GraphQL' },
         { id: 'f6-2', label: 'Documentație OpenAPI' },
         { id: 'f6-3', label: 'Rate limiting & securitate' },
         { id: 'f6-4', label: 'Integrare servicii terțe' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -406,8 +372,6 @@ export const fallbackSettings: NexusSettings = {
             'Integrare servicii terțe',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -434,19 +398,15 @@ export const fallbackSettings: NexusSettings = {
       id: '7',
       slug: 'progressive-web-app-pwa',
       title: 'Progressive Web App (PWA)',
-      subtitle: undefined,
       description:
         'Aplicații web progresive cu funcționalitate offline, notificări push și instalare pe dispozitiv.',
-      longDescription: undefined,
       icon: 'fa-mobile-screen',
-      imageUrl: undefined,
       features: [
         { id: 'f7-1', label: 'Funcționalitate offline' },
         { id: 'f7-2', label: 'Instalare pe ecran principal' },
         { id: 'f7-3', label: 'Notificări push' },
         { id: 'f7-4', label: 'Sincronizare background' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -460,8 +420,6 @@ export const fallbackSettings: NexusSettings = {
             'Sincronizare background',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -488,19 +446,15 @@ export const fallbackSettings: NexusSettings = {
       id: '8',
       slug: 'enterprise-dashboard',
       title: 'Enterprise Dashboard',
-      subtitle: undefined,
       description:
         'Dashboard-uri enterprise interactive cu vizualizări de date, grafice, rapoarte exportabile și permisiuni granulare.',
-      longDescription: undefined,
       icon: 'fa-chart-line',
-      imageUrl: undefined,
       features: [
         { id: 'f8-1', label: 'Vizualizări grafice interactive' },
         { id: 'f8-2', label: 'Export CSV/PDF' },
         { id: 'f8-3', label: 'Filtre & permisiuni avansate' },
         { id: 'f8-4', label: 'Actualizare în timp real' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -514,8 +468,6 @@ export const fallbackSettings: NexusSettings = {
             'Actualizare în timp real',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -542,19 +494,15 @@ export const fallbackSettings: NexusSettings = {
       id: '9',
       slug: 'real-time-application',
       title: 'Real-time Application',
-      subtitle: undefined,
       description:
         'Aplicații cu comunicare în timp real: chat, colaborare live, notificări instant, folosind WebSockets.',
-      longDescription: undefined,
       icon: 'fa-bolt',
-      imageUrl: undefined,
       features: [
         { id: 'f9-1', label: 'WebSockets / Socket.io' },
         { id: 'f9-2', label: 'Chat & colaborare live' },
         { id: 'f9-3', label: 'Sincronizare multi-utilizator' },
         { id: 'f9-4', label: 'Fallback polling' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -568,8 +516,6 @@ export const fallbackSettings: NexusSettings = {
             'Fallback polling',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -596,19 +542,15 @@ export const fallbackSettings: NexusSettings = {
       id: '10',
       slug: 'microservices-architecture',
       title: 'Microservices Architecture',
-      subtitle: undefined,
       description:
         'Proiectare și implementare arhitectură microservicii cu API Gateway, service discovery și comunicare inter-servicii.',
-      longDescription: undefined,
       icon: 'fa-cubes',
-      imageUrl: undefined,
       features: [
         { id: 'f10-1', label: 'API Gateway dedicat' },
         { id: 'f10-2', label: 'Service discovery' },
         { id: 'f10-3', label: 'Comunicare asincronă (message broker)' },
         { id: 'f10-4', label: 'Containerizare Docker' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -622,8 +564,6 @@ export const fallbackSettings: NexusSettings = {
             'Containerizare Docker',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -650,19 +590,15 @@ export const fallbackSettings: NexusSettings = {
       id: '11',
       slug: 'database-design-optimization',
       title: 'Database Design & Optimization',
-      subtitle: undefined,
       description:
         'Proiectare baze de date relaționale și non-relaționale, optimizare interogări, migrare, backup și replicare.',
-      longDescription: undefined,
       icon: 'fa-database',
-      imageUrl: undefined,
       features: [
         { id: 'f11-1', label: 'Modelare entitate-relație' },
         { id: 'f11-2', label: 'Optimizare interogări' },
         { id: 'f11-3', label: 'Migrare date' },
         { id: 'f11-4', label: 'Strategii backup & recovery' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -676,8 +612,6 @@ export const fallbackSettings: NexusSettings = {
             'Strategii backup & recovery',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -704,19 +638,15 @@ export const fallbackSettings: NexusSettings = {
       id: '12',
       slug: 'landing-page-development',
       title: 'Landing Page Development',
-      subtitle: undefined,
       description:
         'Pagini de aterizare optimizate pentru conversie, cu design imersiv, copywriting persuasiv și performanță maximă.',
-      longDescription: undefined,
       icon: 'fa-window-maximize',
-      imageUrl: undefined,
       features: [
         { id: 'f12-1', label: 'Design personalizat premium' },
         { id: 'f12-2', label: 'Optimizare conversie' },
         { id: 'f12-3', label: 'Mobile-first responsive' },
         { id: 'f12-4', label: 'SEO on-page' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -730,8 +660,6 @@ export const fallbackSettings: NexusSettings = {
             'SEO on-page',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -758,19 +686,15 @@ export const fallbackSettings: NexusSettings = {
       id: '13',
       slug: 'website-redesign',
       title: 'Website Redesign',
-      subtitle: undefined,
       description:
         'Redesign complet al site-ului existent cu tehnologii moderne, păstrând SEO și îmbunătățind experiența utilizatorului.',
-      longDescription: undefined,
       icon: 'fa-paint-brush',
-      imageUrl: undefined,
       features: [
         { id: 'f13-1', label: 'Audit UX/UI existent' },
         { id: 'f13-2', label: 'Design modern & responsive' },
         { id: 'f13-3', label: 'Păstrare SEO existent' },
         { id: 'f13-4', label: 'Îmbunătățire performanță' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -784,8 +708,6 @@ export const fallbackSettings: NexusSettings = {
             'Îmbunătățire performanță',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -812,19 +734,15 @@ export const fallbackSettings: NexusSettings = {
       id: '14',
       slug: 'ui-ux-design',
       title: 'UI/UX Design',
-      subtitle: undefined,
       description:
         'Design de interfețe și experiență utilizator: wireframes, prototipuri interactive, design systems și testare cu utilizatori.',
-      longDescription: undefined,
       icon: 'fa-pen-ruler',
-      imageUrl: undefined,
       features: [
         { id: 'f14-1', label: 'Wireframes & prototipuri' },
         { id: 'f14-2', label: 'Design system modular' },
         { id: 'f14-3', label: 'Testare utilizatori' },
         { id: 'f14-4', label: 'Iterații & feedback continuu' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -838,8 +756,6 @@ export const fallbackSettings: NexusSettings = {
             'Iterații & feedback continuu',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -866,19 +782,15 @@ export const fallbackSettings: NexusSettings = {
       id: '15',
       slug: 'seo-optimization',
       title: 'SEO Optimization',
-      subtitle: undefined,
       description:
         'Optimizare SEO on-page și tehnică: audit, cercetare cuvinte cheie, optimizare viteză, markup structurat.',
-      longDescription: undefined,
       icon: 'fa-magnifying-glass',
-      imageUrl: undefined,
       features: [
         { id: 'f15-1', label: 'Audit SEO complet' },
         { id: 'f15-2', label: 'Cercetare cuvinte cheie' },
         { id: 'f15-3', label: 'Optimizare viteză & Core Web Vitals' },
         { id: 'f15-4', label: 'Markup structurat Schema.org' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -892,8 +804,6 @@ export const fallbackSettings: NexusSettings = {
             'Markup structurat Schema.org',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -920,19 +830,15 @@ export const fallbackSettings: NexusSettings = {
       id: '16',
       slug: 'performance-optimization',
       title: 'Performance Optimization',
-      subtitle: undefined,
       description:
         'Optimizare avansată a performanței: lazy loading, code splitting, optimizare imagini, caching și CDN.',
-      longDescription: undefined,
       icon: 'fa-gauge-high',
-      imageUrl: undefined,
       features: [
         { id: 'f16-1', label: 'Audit performanță Lighthouse' },
         { id: 'f16-2', label: 'Code splitting & lazy loading' },
         { id: 'f16-3', label: 'Optimizare imagini & fonturi' },
         { id: 'f16-4', label: 'Strategii caching & CDN' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -946,8 +852,6 @@ export const fallbackSettings: NexusSettings = {
             'Strategii caching & CDN',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -974,19 +878,15 @@ export const fallbackSettings: NexusSettings = {
       id: '17',
       slug: 'website-maintenance',
       title: 'Website Maintenance',
-      subtitle: undefined,
       description:
         'Pachet lunar de mentenanță: actualizări de securitate, backup-uri, monitorizare uptime, suport tehnic.',
-      longDescription: undefined,
       icon: 'fa-screwdriver-wrench',
-      imageUrl: undefined,
       features: [
         { id: 'f17-1', label: 'Actualizări securitate' },
         { id: 'f17-2', label: 'Backup-uri automate' },
         { id: 'f17-3', label: 'Monitorizare 24/7' },
         { id: 'f17-4', label: 'Suport tehnic prioritar' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -1000,8 +900,6 @@ export const fallbackSettings: NexusSettings = {
             'Suport tehnic prioritar',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -1028,19 +926,15 @@ export const fallbackSettings: NexusSettings = {
       id: '18',
       slug: 'brand-identity-design',
       title: 'Brand Identity Design',
-      subtitle: undefined,
       description:
         'Identitate vizuală completă: logo, paletă cromatică, tipografie, ghid de brand, materiale de marketing.',
-      longDescription: undefined,
       icon: 'fa-fill-drip',
-      imageUrl: undefined,
       features: [
         { id: 'f18-1', label: 'Logo & variațiuni' },
         { id: 'f18-2', label: 'Paletă cromatică & tipografie' },
         { id: 'f18-3', label: 'Ghid de brand complet' },
         { id: 'f18-4', label: 'Materiale marketing' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -1054,8 +948,6 @@ export const fallbackSettings: NexusSettings = {
             'Materiale marketing',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -1082,19 +974,15 @@ export const fallbackSettings: NexusSettings = {
       id: '19',
       slug: 'wordpress-customization',
       title: 'WordPress Customization',
-      subtitle: undefined,
       description:
         'Teme și plugin-uri WordPress personalizate, optimizare WooCommerce, securizare și migrare.',
-      longDescription: undefined,
       icon: 'fa-wordpress',
-      imageUrl: undefined,
       features: [
         { id: 'f19-1', label: 'Teme personalizate' },
         { id: 'f19-2', label: 'Dezvoltare plugin-uri' },
         { id: 'f19-3', label: 'Optimizare WooCommerce' },
         { id: 'f19-4', label: 'Securizare & migrare' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -1108,8 +996,6 @@ export const fallbackSettings: NexusSettings = {
             'Securizare & migrare',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -1136,19 +1022,15 @@ export const fallbackSettings: NexusSettings = {
       id: '20',
       slug: 'email-template-design',
       title: 'Email Template Design',
-      subtitle: undefined,
       description:
         'Șabloane de email responsive, testate pe toți clienții de email, compatibile cu platformele populare de email marketing.',
-      longDescription: undefined,
       icon: 'fa-envelope',
-      imageUrl: undefined,
       features: [
         { id: 'f20-1', label: 'Design responsive email' },
         { id: 'f20-2', label: 'Testare multi-client' },
         { id: 'f20-3', label: 'Compatibil Mailchimp/SendGrid' },
         { id: 'f20-4', label: 'Dark mode support' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -1162,8 +1044,6 @@ export const fallbackSettings: NexusSettings = {
             'Dark mode support',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -1190,19 +1070,15 @@ export const fallbackSettings: NexusSettings = {
       id: '21',
       slug: 'technical-consultation',
       title: 'Technical Consultation',
-      subtitle: undefined,
       description:
         'Consultanță tehnică pentru alegerea stack-ului, arhitectură, audit de cod și planificare proiect.',
-      longDescription: undefined,
       icon: 'fa-comments',
-      imageUrl: undefined,
       features: [
         { id: 'f21-1', label: 'Evaluare stack tehnologic' },
         { id: 'f21-2', label: 'Audit de cod & arhitectură' },
         { id: 'f21-3', label: 'Planificare proiect' },
         { id: 'f21-4', label: 'Raport detaliat & recomandări' },
       ],
-      techStack: undefined,
       pricing: [
         {
           name: 'Standard',
@@ -1216,8 +1092,6 @@ export const fallbackSettings: NexusSettings = {
             'Raport detaliat & recomandări',
           ],
           highlighted: false,
-          ctaLabel: undefined,
-          ctaHref: undefined,
         },
         {
           name: 'Redus',
@@ -1251,11 +1125,6 @@ export const fallbackSettings: NexusSettings = {
       description:
         'Analizăm obiectivele tale, publicul țintă și competiția. Definim strategia digitală optimă și planul de proiect detaliat.',
       icon: 'fa-compass',
-      imageUrl: undefined,
-      duration: undefined,
-      deliverables: undefined,
-      tools: undefined,
-      highlightColor: undefined,
     },
     {
       id: 'p2',
@@ -1264,11 +1133,6 @@ export const fallbackSettings: NexusSettings = {
       description:
         'Creăm wireframe-uri și prototipuri interactive. Rafinăm designul împreună cu tine până când fiecare pixel reflectă viziunea ta.',
       icon: 'fa-pencil',
-      imageUrl: undefined,
-      duration: undefined,
-      deliverables: undefined,
-      tools: undefined,
-      highlightColor: undefined,
     },
     {
       id: 'p3',
@@ -1277,11 +1141,6 @@ export const fallbackSettings: NexusSettings = {
       description:
         'Scriem cod curat, modular și scalabil. Folosim metodologii Agile, code review și integrare continuă pentru calitate maximă.',
       icon: 'fa-code',
-      imageUrl: undefined,
-      duration: undefined,
-      deliverables: undefined,
-      tools: undefined,
-      highlightColor: undefined,
     },
     {
       id: 'p4',
@@ -1290,11 +1149,6 @@ export const fallbackSettings: NexusSettings = {
       description:
         'Testăm riguros pe multiple dispozitive și browsere. Optimizăm performanța, accesibilitatea și SEO-ul înainte de lansare.',
       icon: 'fa-vial',
-      imageUrl: undefined,
-      duration: undefined,
-      deliverables: undefined,
-      tools: undefined,
-      highlightColor: undefined,
     },
     {
       id: 'p5',
@@ -1303,11 +1157,6 @@ export const fallbackSettings: NexusSettings = {
       description:
         'Lansăm proiectul în producție și oferim suport post-lansare. Monitorizăm performanța și iterăm pe baza feedback-ului real.',
       icon: 'fa-rocket',
-      imageUrl: undefined,
-      duration: undefined,
-      deliverables: undefined,
-      tools: undefined,
-      highlightColor: undefined,
     },
   ],
 
@@ -1318,60 +1167,48 @@ export const fallbackSettings: NexusSettings = {
       question: 'Cât durează un proiect tipic?',
       answer:
         'Depinde de complexitate: o landing page se livrează în 3-5 zile, un site de prezentare în 1-2 săptămâni, iar o platformă complexă (SaaS, e-commerce) poate dura 4-8 săptămâni. Oferim estimări precise după sesiunea de descoperire.',
-      category: undefined,
       order: 1,
       isActive: true,
-      relatedServiceIds: undefined,
     },
     {
       id: 'faq2',
       question: 'Ce stack tehnologic folosești?',
       answer:
         'Frontend: React, Next.js, TypeScript, Tailwind CSS. Backend: Node.js, Express, Python/FastAPI. Baze de date: PostgreSQL, SQLite, MongoDB. DevOps: Docker, AWS, Vercel. Alegem stack-ul optim în funcție de necesitățile proiectului tău.',
-      category: undefined,
       order: 2,
       isActive: true,
-      relatedServiceIds: undefined,
     },
     {
       id: 'faq3',
       question: 'Oferi garanție după livrare?',
       answer:
         'Da. Toate proiectele includ o perioadă de garanție de 30 de zile pentru remedierea oricăror bug-uri descoperite post-lansare, fără costuri suplimentare.',
-      category: undefined,
       order: 3,
       isActive: true,
-      relatedServiceIds: undefined,
     },
     {
       id: 'faq4',
       question: 'Cum funcționează plata?',
       answer:
         'Lucrăm cu un sistem de plată în etape: 30% avans la semnarea contractului, 40% la jumătatea proiectului și 30% la livrarea finală. Acceptăm transfer bancar, card și PayPal.',
-      category: undefined,
       order: 4,
       isActive: true,
-      relatedServiceIds: undefined,
     },
     {
       id: 'faq5',
       question: 'Poți prelua un proiect început de altcineva?',
       answer:
         'Absolut. Am salvat și dus la bun sfârșit multe proiecte abandonate. Începem cu un audit complet al codului existent și propunem un plan de redresare.',
-      category: undefined,
       order: 5,
       isActive: true,
-      relatedServiceIds: undefined,
     },
     {
       id: 'faq6',
       question: 'Oferi mentenanță continuă după lansare?',
       answer:
         'Da, oferim pachete lunare de mentenanță care includ actualizări de securitate, backup-uri, monitorizare și suport tehnic prioritar. Prețurile pornesc de la 209 EUR/lună.',
-      category: undefined,
       order: 6,
       isActive: true,
-      relatedServiceIds: undefined,
     },
   ],
 
@@ -1381,12 +1218,8 @@ export const fallbackSettings: NexusSettings = {
       id: 'port1',
       slug: 'findash-analytics',
       title: 'FinDash Analytics',
-      subtitle: undefined,
       description:
         'Dashboard financiar enterprise cu vizualizări interactive, exporturi multiple și actualizare în timp real.',
-      challenge: undefined,
-      solution: undefined,
-      results: undefined,
       category: 'Enterprise',
       tags: ['React', 'Node.js', 'PostgreSQL', 'WebSocket'],
       media: [
@@ -1398,11 +1231,7 @@ export const fallbackSettings: NexusSettings = {
       ],
       thumbnailUrl: '/images/portfolio-1.jpg',
       liveUrl: '#',
-      repoUrl: undefined,
-      testimonial: undefined,
       serviceIds: [],
-      clientName: undefined,
-      completionDate: undefined,
       order: 1,
       isFeatured: false,
       isActive: true,
@@ -1413,12 +1242,8 @@ export const fallbackSettings: NexusSettings = {
       id: 'port2',
       slug: 'greeneats-mobile',
       title: 'GreenEats Mobile',
-      subtitle: undefined,
       description:
         'Aplicație mobilă PWA pentru livrări de mâncare sustenabilă, cu tracking live și plăți integrate.',
-      challenge: undefined,
-      solution: undefined,
-      results: undefined,
       category: 'Mobile',
       tags: ['Next.js', 'PWA', 'Stripe', 'Mapbox'],
       media: [
@@ -1430,11 +1255,7 @@ export const fallbackSettings: NexusSettings = {
       ],
       thumbnailUrl: '/images/portfolio-2.jpg',
       liveUrl: '#',
-      repoUrl: undefined,
-      testimonial: undefined,
       serviceIds: [],
-      clientName: undefined,
-      completionDate: undefined,
       order: 2,
       isFeatured: false,
       isActive: true,
@@ -1445,12 +1266,8 @@ export const fallbackSettings: NexusSettings = {
       id: 'port3',
       slug: 'artisan-brand-identity',
       title: 'Artisan Brand Identity',
-      subtitle: undefined,
       description:
         'Rebranding complet pentru o rețea de brutării artizanale: logo, ambalaje, site și materiale marketing.',
-      challenge: undefined,
-      solution: undefined,
-      results: undefined,
       category: 'Branding',
       tags: ['Branding', 'Figma', 'WordPress', 'SEO'],
       media: [
@@ -1462,11 +1279,7 @@ export const fallbackSettings: NexusSettings = {
       ],
       thumbnailUrl: '/images/portfolio-3.jpg',
       liveUrl: '#',
-      repoUrl: undefined,
-      testimonial: undefined,
       serviceIds: [],
-      clientName: undefined,
-      completionDate: undefined,
       order: 3,
       isFeatured: false,
       isActive: true,
@@ -1477,12 +1290,8 @@ export const fallbackSettings: NexusSettings = {
       id: 'port4',
       slug: 'eduplatform-lms',
       title: 'EduPlatform LMS',
-      subtitle: undefined,
       description:
         'Platformă de learning management cu cursuri video, quiz-uri interactive, certificări și marketplace.',
-      challenge: undefined,
-      solution: undefined,
-      results: undefined,
       category: 'Education',
       tags: ['Next.js', 'Node.js', 'MongoDB', 'AWS'],
       media: [
@@ -1494,11 +1303,7 @@ export const fallbackSettings: NexusSettings = {
       ],
       thumbnailUrl: '/images/portfolio-1.jpg',
       liveUrl: '#',
-      repoUrl: undefined,
-      testimonial: undefined,
       serviceIds: [],
-      clientName: undefined,
-      completionDate: undefined,
       order: 4,
       isFeatured: false,
       isActive: true,
@@ -1509,12 +1314,8 @@ export const fallbackSettings: NexusSettings = {
       id: 'port5',
       slug: 'shopflow-ecommerce',
       title: 'ShopFlow E-Commerce',
-      subtitle: undefined,
       description:
         'Magazin online cu peste 5000 de produse, filtru avansat, wishlist și sistem de recomandări AI.',
-      challenge: undefined,
-      solution: undefined,
-      results: undefined,
       category: 'E-Commerce',
       tags: ['React', 'Express', 'PostgreSQL', 'Redis'],
       media: [
@@ -1526,11 +1327,7 @@ export const fallbackSettings: NexusSettings = {
       ],
       thumbnailUrl: '/images/portfolio-2.jpg',
       liveUrl: '#',
-      repoUrl: undefined,
-      testimonial: undefined,
       serviceIds: [],
-      clientName: undefined,
-      completionDate: undefined,
       order: 5,
       isFeatured: false,
       isActive: true,
@@ -1541,12 +1338,8 @@ export const fallbackSettings: NexusSettings = {
       id: 'port6',
       slug: 'mediconnect-platform',
       title: 'MediConnect Platform',
-      subtitle: undefined,
       description:
         'Platformă de telemedicină cu programări online, video call integrat și dosar medical electronic.',
-      challenge: undefined,
-      solution: undefined,
-      results: undefined,
       category: 'Healthcare',
       tags: ['Next.js', 'WebRTC', 'FHIR', 'Docker'],
       media: [
@@ -1558,11 +1351,7 @@ export const fallbackSettings: NexusSettings = {
       ],
       thumbnailUrl: '/images/portfolio-3.jpg',
       liveUrl: '#',
-      repoUrl: undefined,
-      testimonial: undefined,
       serviceIds: [],
-      clientName: undefined,
-      completionDate: undefined,
       order: 6,
       isFeatured: false,
       isActive: true,
@@ -1629,13 +1418,10 @@ export const fallbackSettings: NexusSettings = {
   globalPromo: {
     id: 'global-promo',
     text: 'Reduceri de lansare disponibile!',
-    subtext: undefined,
     style: 'highlight',
-    action: undefined,
     dismissible: true,
     expiresAt: '2026-12-31T23:59:59.000Z',
     isActive: true,
-    pagesExclude: undefined,
     order: 0,
     createdAt: '2025-01-01T00:00:00.000Z',
     updatedAt: '2025-01-01T00:00:00.000Z',

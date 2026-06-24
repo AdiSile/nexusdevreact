@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, type FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
-import type { NexusSettings } from "../../../lib/fallback";
+import type { NexusSettings, FooterColumnLink } from "../../../lib/fallback";
 import { fallbackSettings } from "../../../lib/fallback";
 import ContactEditor from "./components/ContactEditor";
 
@@ -574,7 +574,7 @@ function StudioForm({
 
   const update = useCallback(
     (field: string, value: string | number) => {
-      setForm((prev) => ({ ...prev, [field]: value }));
+      setForm((prev) => ({ ...prev, [field]: value } as StudioFormData));
       onDirty();
       setErrors((prev) => {
         const next = { ...prev };
@@ -589,7 +589,7 @@ function StudioForm({
     (platform: string, value: string) => {
       setForm((prev) => ({
         ...prev,
-        social: { ...prev.social, [platform]: value },
+        social: { ...prev.social, [platform]: value } as StudioFormData["social"],
       }));
       onDirty();
     },
@@ -637,7 +637,7 @@ function StudioForm({
               className={inputClass("name")}
             />
           </Field>
-          <Field label="An fondare" field="s-founded">
+          <Field label="An fondare" field="s-founded" error={undefined}>
             <input
               id="s-founded"
               type="number"
@@ -658,7 +658,7 @@ function StudioForm({
             className={inputClass("tagline")}
           />
         </Field>
-        <Field label="Descriere" field="s-desc">
+        <Field label="Descriere" field="s-desc" error={undefined}>
           <textarea
             id="s-desc"
             rows={3}
@@ -686,7 +686,7 @@ function StudioForm({
               className={inputClass("email")}
             />
           </Field>
-          <Field label="Telefon" field="s-phone">
+          <Field label="Telefon" field="s-phone" error={undefined}>
             <input
               id="s-phone"
               type="text"
@@ -697,7 +697,7 @@ function StudioForm({
             />
           </Field>
         </div>
-        <Field label="Adresă" field="s-address">
+        <Field label="Adresă" field="s-address" error={undefined}>
           <input
             id="s-address"
             type="text"
@@ -715,7 +715,7 @@ function StudioForm({
           Media
         </legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Field label="Hero Video URL" field="s-hero-video">
+          <Field label="Hero Video URL" field="s-hero-video" error={undefined}>
             <input
               id="s-hero-video"
               type="text"
@@ -725,7 +725,7 @@ function StudioForm({
               className={inputClass("heroVideoUrl")}
             />
           </Field>
-          <Field label="Hero Poster URL" field="s-hero-poster">
+          <Field label="Hero Poster URL" field="s-hero-poster" error={undefined}>
             <input
               id="s-hero-poster"
               type="text"
@@ -736,7 +736,7 @@ function StudioForm({
             />
           </Field>
         </div>
-        <Field label="CV URL" field="s-cv">
+        <Field label="CV URL" field="s-cv" error={undefined}>
           <input
             id="s-cv"
             type="text"
@@ -754,7 +754,7 @@ function StudioForm({
           Rețele sociale
         </legend>
         {(["github", "linkedin", "twitter", "instagram"] as const).map((p) => (
-          <Field key={p} label={p.charAt(0).toUpperCase() + p.slice(1)} field={`s-social-${p}`}>
+          <Field key={p} label={p.charAt(0).toUpperCase() + p.slice(1)} field={`s-social-${p}`} error={undefined}>
             <input
               id={`s-social-${p}`}
               type="url"
@@ -807,7 +807,7 @@ function SeoForm({
 
   const update = useCallback(
     (field: string, value: string) => {
-      setForm((prev) => ({ ...prev, [field]: value }));
+      setForm((prev) => ({ ...prev, [field]: value } as SeoFormData));
       onDirty();
       setErrors((prev) => {
         const next = { ...prev };
@@ -865,7 +865,7 @@ function SeoForm({
         <CharCount current={form.description.length} max={160} />
       </Field>
 
-      <Field label="Cuvinte cheie" field="seo-kw">
+      <Field label="Cuvinte cheie" field="seo-kw" error={undefined}>
         <input
           id="seo-kw"
           type="text"
@@ -877,7 +877,7 @@ function SeoForm({
       </Field>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label="OG Image URL" field="seo-og">
+        <Field label="OG Image URL" field="seo-og" error={undefined}>
           <input
             id="seo-og"
             type="text"
@@ -887,7 +887,7 @@ function SeoForm({
             className={inputClass("ogImage")}
           />
         </Field>
-        <Field label="Site URL" field="seo-url">
+        <Field label="Site URL" field="seo-url" error={undefined}>
           <input
             id="seo-url"
             type="url"
@@ -900,7 +900,7 @@ function SeoForm({
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label="Limbă" field="seo-lang">
+        <Field label="Limbă" field="seo-lang" error={undefined}>
           <input
             id="seo-lang"
             type="text"
@@ -910,7 +910,7 @@ function SeoForm({
             className={inputClass("language")}
           />
         </Field>
-        <Field label="Twitter Handle" field="seo-tw">
+        <Field label="Twitter Handle" field="seo-tw" error={undefined}>
           <input
             id="seo-tw"
             type="text"
@@ -931,14 +931,14 @@ function SeoForm({
    Formular: FOOTER
    ═══════════════════════════════════════════════ */
 
-interface FooterColumnData {
+interface FooterColumnMutable {
   title: string;
-  links: { label: string; href: string }[];
+  links: FooterColumnLink[];
 }
 
 interface FooterFormData {
   copyright: string;
-  columns: FooterColumnData[];
+  columns: FooterColumnMutable[];
 }
 
 function FooterForm({
@@ -1015,7 +1015,7 @@ function FooterForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <Field label="Copyright" field="f-copyright">
+      <Field label="Copyright" field="f-copyright" error={undefined}>
         <input
           id="f-copyright"
           type="text"
@@ -1035,7 +1035,7 @@ function FooterForm({
           key={colIdx}
           className="p-4 rounded-glass border border-glass-border bg-white/[0.02]"
         >
-          <Field label={`Coloana ${colIdx + 1} — Titlu`} field={`col-${colIdx}`}>
+          <Field label={`Coloana ${colIdx + 1} — Titlu`} field={`col-${colIdx}`} error={undefined}>
             <input
               id={`col-title-${colIdx}`}
               type="text"
@@ -1134,7 +1134,7 @@ function PromoForm({
 
   const update = useCallback(
     (field: string, value: string | boolean) => {
-      setForm((prev) => ({ ...prev, [field]: value }));
+      setForm((prev) => ({ ...prev, [field]: value } as PromoFormData));
       onDirty();
     },
     [onDirty],
@@ -1168,7 +1168,7 @@ function PromoForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <Field label="Text promo" field="p-text">
+      <Field label="Text promo" field="p-text" error={undefined}>
         <input
           id="p-text"
           type="text"
@@ -1179,7 +1179,7 @@ function PromoForm({
         />
       </Field>
 
-      <Field label="Subtext (opțional)" field="p-sub">
+      <Field label="Subtext (opțional)" field="p-sub" error={undefined}>
         <input
           id="p-sub"
           type="text"
@@ -1230,7 +1230,7 @@ function PromoForm({
         />
       </div>
 
-      <Field label="Data expirării" field="p-expires">
+      <Field label="Data expirării" field="p-expires" error={undefined}>
         <input
           id="p-expires"
           type="date"

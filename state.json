@@ -74,6 +74,61 @@
       "role": "assistant",
       "content": "✅ Pas 1 (tdd-guide): 1 fișiere salvate.",
       "timestamp": 1782340456.6024663
+    },
+    {
+      "role": "user",
+      "content": "Repară eroarea de compilare TypeScript din proiectul „Nexus Dev Studio\".  1. **`frontend/app/admin/dashboard/page.tsx`:**    - La linia 640 și oriunde altundeva componenta `<Field>` este folosită fără proprietatea `error`, adaugă `error={undefined}` ca proprietate. Exemplu:      `<Field label=\"An fondare\" field=\"s-founded\" error={undefined}>`    - Nu modifica altceva.  2. **Verifică și repară orice altă eroare de compilare TypeScript:**    - Rulează `npm run build` în folderul `frontend/` și repară orice eroare similară (proprietăți lipsă la componente).    - Dacă găsești și alte erori de compilare, repară-le.  3. **După terminare, returnează fișierele modificate în formatul:** ### cale/relativă/la/fișier.ext conținut complet ### END",
+      "timestamp": 1782340835.6244094
+    },
+    {
+      "role": "system",
+      "content": "🚀 Proiect pornit: Proiect: nexusdevstudio-sillicon-valley-ro",
+      "timestamp": 1782340835.638144
+    },
+    {
+      "role": "user",
+      "content": "În fișierul `frontend/app/admin/dashboard/page.tsx`, la linia 640, componenta `<Field>` lipsește prop-ul `error`. Adaugă `error={undefined}` la fiecare apel `<Field>` din acest fișier care nu are deja prop-ul `error` definit. După modificare, returnează fișierul complet.",
+      "timestamp": 1782340991.231477
+    },
+    {
+      "role": "system",
+      "content": "🚀 Proiect pornit: Proiect: nexusdevstudio-sillicon-valley-ro",
+      "timestamp": 1782340991.2593021
+    },
+    {
+      "role": "user",
+      "content": "Editează proiectul „Nexus Dev Studio\" (nexusdevreact) pentru a rezolva TOATE erorile TypeScript din frontend. Folosește agentul typescript-reviewer pentru a verifica fiecare fișier `.ts` și `.tsx` din `frontend/`. Asigură-te că `npm run build` (în folderul `frontend`) se termină cu succes, fără erori de compilare.  1. Rulează `npm run build` în `frontend/` pentru a vedea lista completă a erorilor. 2. Pentru fiecare eroare, modifică fișierul corespunzător astfel încât să fie corect din punct de vedere TypeScript. 3. După corecturi, rulează din nou build-ul pentru a verifica. 4. Returnează toate fișierele modificate.",
+      "timestamp": 1782341228.0716784
+    },
+    {
+      "role": "system",
+      "content": "🚀 Proiect pornit: Proiect: nexusdevstudio-sillicon-valley-ro",
+      "timestamp": 1782341228.087301
+    },
+    {
+      "role": "user",
+      "content": "Corectează toate erorile TypeScript din folderul `frontend/` ale proiectului Nexus Dev Studio (nexusdevreact). Rulează `npm run build` în `frontend/`, identifică erorile și repară-le pe toate. Returnează fișierele modificate.",
+      "timestamp": 1782341895.0629227
+    },
+    {
+      "role": "system",
+      "content": "🚀 Proiect pornit: Proiect: nexusdevstudio-sillicon-valley-ro",
+      "timestamp": 1782341895.084051
+    },
+    {
+      "role": "user",
+      "content": "Corectează toate erorile TypeScript din folderul `frontend/` ale proiectului Nexus Dev Studio (nexusdevreact). Rulează `npm run build` în `frontend/`, identifică erorile și repară-le pe toate. Returnează fișierele modificate.",
+      "timestamp": 1782342033.6989632
+    },
+    {
+      "role": "system",
+      "content": "🚀 Proiect pornit: Proiect: nexusdevstudio-sillicon-valley-ro",
+      "timestamp": 1782342033.712923
+    },
+    {
+      "role": "assistant",
+      "content": "✅ Pas 1 (typescript-reviewer): 1 fișiere salvate.\n✅ Pas 2 (build-error-resolver): 1 fișiere salvate.\n✅ Pas 3 (react-build-resolver): 1 fișiere salvate.\n✅ Pas 4 (react-build-resolver): 1 fișiere salvate.\n✅ Pas 5 (react-build-resolver): 1 fișiere salvate.\n✅ Pas 6 (code-simplifier): 3 fișiere salvate.",
+      "timestamp": 1782342926.3051581
     }
   ],
   "cerinta": "Creează proiectul complet „Nexus Dev Studio\" de la zero, ca o aplicație web modernă, scalabilă și imersivă, demnă de un startup din Silicon Valley. Folosește **Next.js 14+ (App Router) cu React 18+ și TypeScript** pentru frontend, **Node.js cu Express și SQLite** pentru backend, și **Tailwind CSS** pentru stilizare. Toate componentele vor fi găzduite într-un **monorepo** cu foldere separate pentru `frontend` și `backend`. Site-ul trebuie să fie o singură pagină (SPA-like) cu tranziții fluide, design glassmorphism premium, particule canvas mov/aurii, cursor personalizat și fără emoji-uri – doar iconițe Font Awesome. Securitate modernă, performanță maximă, responsive perfect.  1. **Arhitectură generală:**    - `backend/`: Express + SQLite (better-sqlite3). Servește API-ul RESTful și, opțional, fișierele statice ale frontend-ului în producție.    - `frontend/`: Next.js 14 cu App Router. Conține paginile publice (o singură pagină principală) și panoul de administrare.    - Baza de date: un fișier SQLite în `backend/data/nexus.db`. Conține tabelele `settings` și `users`.    - Autentificare: JWT stocat în cookie-uri HttpOnly/Secure/SameSite=Strict. Rutele API de admin sunt protejate.    - Toate datele dinamice (texte, servicii, reduceri, FAQ, etc.) sunt stocate într-un singur obiect JSON în coloana `data` a tabelului `settings` și expuse prin API-ul `/api/settings`.  2. **Backend (Node.js + Express + SQLite):**    - `backend/config/db.js`: inițializare curată a bazei de date. Creează tabelele `settings` și `users` dacă nu există. La prima pornire, dacă `settings` este goală, o populezi cu valorile implicite complete (identitate freelancer, cele 21 de servicii cu prețuri și reduceri, proces, FAQ, contact, SEO, footer etc.). Dacă `users` este goală, creezi adminul implicit `nexusdevstudio@admin.ro` / `.salataverde123!` (hash bcrypt).    - `backend/routes/settings.js`: `GET /api/settings` returnează JSON-ul complet. `PUT /api/settings` primește un obiect parțial, face merge și salvează.    - `backend/routes/auth.js`: `POST /api/auth/login` verifică email/parolă, returnează JWT în cookie HttpOnly/Secure/SameSite=Strict. `GET /api/auth/check` verifică token-ul și returnează `{ authenticated: true/false }`. Nu utiliza CSRF.    - `backend/routes/contact.js`: `POST /api/contact` salvează mesajele; `GET /api/contact` le returnează pentru admin.    - Securitate: Helmet (fără CSP personalizat), CORS configurat restrictiv, rate limiting pe auth, prepared statements, validare strictă input, erori generice fără detalii.  3. **Sistem de reduceri și promoții (seed + afișare):**    - Toate cele 21 de servicii cu prețuri normale și reduse, etichete și categorii conform listei finale discutate (20% reducere pentru complexe, 40% pentru simple, valabile până la sfârșitul lui 2026).    - În setări există un obiect `globalPromo` cu câmpurile `active`, `discountPercent`, `label`, `startDate`, `endDate`. Când este activ, reducerile globale se aplică peste cele individuale pe frontend. Panoul de administrare permite activarea/dezactivarea și editarea acestei promoții.  4. **Frontend (Next.js + React + TypeScript + Tailwind CSS):**    - Pagină publică unică (`frontend/app/page.tsx`) care încarcă datele de la `GET /api/settings` și populează toate secțiunile: Hero, Cum lucrăm, Servicii, Portofoliu, Termene, FAQ, Contact, Footer.    - Design imersiv: glassmorphism, particule canvas mov/aurii, cursor personalizat, carduri 3D cu efect de tilt, animații la scroll (Framer Motion), video Hero dinamic (URL din setări).    - Componente separate pentru fiecare secțiune (Hero, Services, Process, Portfolio, FAQ, Contact, Footer).    - Responsive perfect (320px – 2560px), fără emoji-uri, doar Font Awesome.    - Fallback: dacă API-ul nu răspunde, afișează date hardcodate identice cu seed-ul.  5. **Panoul de administrare (frontend/app/admin/):**    - `page.tsx` (login): formular email/parolă, trimite la `/api/auth/login`, redirecționează la dashboard.    - `dashboard/page.tsx`: sidebar cu secțiunile Hero & General, Servicii, Cum lucrăm, FAQ, Portofoliu, Contact, SEO & Footer, Mesaje, Promoții. Fiecare secțiune încarcă datele din API și le salvează prin `PUT /api/settings` (sau endpoint-uri specifice). Toate modificările sunt reflectate instant pe site-ul public după refresh.    - Design identic cu site-ul public (glassmorphism, particule, fără emoji-uri).    - Credențiale: `nexusdevstudio@admin.ro` / `.salataverde123!`.  6. **Build și deploy:**    - Scripturi în `package.json`-ul rădăcină (monorepo) pentru a instala dependențele, a construi frontend-ul și a porni serverul.    - În producție, Express servește fișierele statice exportate de Next.js.    - Fișierul `backend/package.json` conține `\"start\": \"node server.js\"` și `\"engines\": { \"node\": \"20.x\" }`. Creează și fișierul `.node-version` cu `20`.  7. **După terminare, returnează toate fișierele modificate sau create în formatul exact:** cale/relativă/la/fișier.ext conținut complet  END",
@@ -95,19 +150,61 @@
       "desc": "Fișier: frontend/app/admin/dashboard/components/ContactEditor.tsx\nVerificare și înlocuire `errs.email` → `errs['email']` (nu s-au găsit apariții; fișierul este deja conform)\n\nSkill-uri relevante:\nSkill: accessibility\n# Accessibility (WCAG 2.2)\n\nThis skill ensures that digital interfaces are Perceivable, Operable, Understandable, and Robust (POUR) for all users, including those using screen readers, switch controls, or keyboard navigation. It focuses on the technical implementation of WCAG 2.2 success criteria.\n\n\n\nSkill: agent-architecture-audit\n# Agent Architecture Audit\n\nA diagnostic workflow for agent systems that hide failures behind wrapper layers, stale memory, retry loops, or transport/rendering mutations.\n\n## When to Activate\n\n**MANDATORY for:**\n- Releasing any agent or LLM-powered application to production\n- Shipping features with \n\nSkill: agent-harness-construction\n# Agent Harness Construction\n\nUse this skill when you are improving how an agent plans, calls tools, recovers from errors, and converges on completion.\n\n## Core Model\n\nAgent output quality is constrained by:\n1. Action space quality\n2. Observation quality\n3. Recovery quality\n4. Context budget quality\n\nReguli:\n---\npaths:\n  - \"**/*.ets\"\n  - \"**/*.ts\"\n  - \"**/module.json5\"\n  - \"**/oh-package.json5\"\n  - \"**/build-profile.json5\"\n---\n# HarmonyOS / ArkTS Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with HarmonyOS and ArkTS-specific content.\n## ArkTS Language Constraints\n---\npaths:\n  - \"**/*.cs\"\n  - \"**/*.csx\"\n---\n# C# Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with C#-specific content.\n- Follow current .NET conventions and enable nullable reference types\n- Prefer explicit access modifiers on public and internal APIs\n- Keep files aligned with the primary type they define\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
       "agent": "tdd-guide",
       "status": "pending"
+    },
+    {
+      "id": "2878f488",
+      "desc": "`frontend/app/admin/dashboard/page.tsx` - Adaugă `error={undefined}` la toate instanțele componentei `<Field>` care nu au proprietatea `error`\n\nSkill-uri relevante:\nSkill: agent-architecture-audit\n# Agent Architecture Audit\n\nA diagnostic workflow for agent systems that hide failures behind wrapper layers, stale memory, retry loops, or transport/rendering mutations.\n\n## When to Activate\n\n**MANDATORY for:**\n- Releasing any agent or LLM-powered application to production\n- Shipping features with \n\nSkill: angular-developer\n# Angular Developer Guidelines\n\n## When to Activate\n\n- Working in any Angular project or codebase\n- Creating or scaffolding a new Angular project, application, or library\n- Generating components, services, directives, pipes, guards, or resolvers\n- Implementing reactivity with Angular Signals, `linke\n\nSkill: automation-audit-ops\n# Automation Audit Ops\n\nUse this when the user asks what automations are live, which jobs are broken, where overlap exists, or what tooling and connectors are actually doing useful work right now.\n\nThis is an audit-first operator skill. The job is to produce an evidence-backed inventory and a keep /\n\nReguli:\n---\npaths:\n  - \"**/*.component.ts\"\n  - \"**/*.component.html\"\n  - \"**/*.service.ts\"\n  - \"**/*.directive.ts\"\n  - \"**/*.pipe.ts\"\n  - \"**/*.guard.ts\"\n  - \"**/*.resolver.ts\"\n  - \"**/*.module.ts\"\n---\n# Angular Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with Angular specific content.\nAlways check the project's Angular version before writing code — features differ significantly between versions. Run `ng version` or inspect `package.json`. When creating a new project, do not pin a version unless the user specifies one.\n---\npaths:\n  - \"**/*.go\"\n  - \"**/go.mod\"\n  - \"**/go.sum\"\n---\n# Go Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with Go specific content.\n- **gofmt** and **goimports** are mandatory — no style debates\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
+      "agent": "tdd-guide",
+      "status": "pending"
+    },
+    {
+      "id": "437667a6",
+      "desc": "Fișier: frontend/lib/types.ts\nVerificare și asigurare că toate câmpurile opționale acceptă explicit `| undefined` pentru `exactOptionalPropertyTypes: true`\n\nSkill-uri relevante:\nSkill: flox-environments\n# Flox Environments\n\nFlox creates reproducible development environments defined in a single TOML manifest. Every developer on the team gets identical packages, tools, and configuration — across macOS and Linux — without containers or VMs. Built on Nix with access to over 150,000 packages.\n\n## When t\n\nSkill: frontend-a11y\n# Frontend Accessibility Patterns\n\nPractical accessibility patterns for React and Next.js. Covers the issues most commonly flagged in code review: missing form labels, incorrect ARIA usage, non-semantic interactive elements, and broken keyboard navigation.\n\n## When to Activate\n\n- Building or reviewi\n\nSkill: frontend-design-direction\n# Frontend Design Direction\n\nUse this skill when the work is not just making UI function, but making it feel\npurposeful, polished, and appropriate to the product domain.\n\nSource: salvaged from stale community PR #1659 by `linus707`.\n\nNote: ECC intentionally does not rebundle the canonical Anthropic\n\n\nReguli:\n---\npaths:\n  - \"**/*.ets\"\n  - \"**/*.ts\"\n  - \"**/module.json5\"\n  - \"**/oh-package.json5\"\n  - \"**/build-profile.json5\"\n---\n# HarmonyOS / ArkTS Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with HarmonyOS and ArkTS-specific content.\n## ArkTS Language Constraints\n---\npaths:\n  - \"**/*.ts\"\n  - \"**/*.tsx\"\n  - \"**/*.js\"\n  - \"**/*.jsx\"\n---\n# TypeScript/JavaScript Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with TypeScript/JavaScript specific content.\n## Types and Interfaces\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
+      "agent": "typescript-reviewer",
+      "status": "pending"
+    },
+    {
+      "id": "020cb336",
+      "desc": "Fișier: frontend/lib/fallback.ts\nVerificare obiecte fallback (ServicePricingTier, ProcessStep, FAQItem, PortfolioItem, GlobalPromo) că respectă tipurile din types.ts\n\nSkill-uri relevante:\nSkill: codebase-onboarding\n# Codebase Onboarding\n\nSystematically analyze an unfamiliar codebase and produce a structured onboarding guide. Designed for developers joining a new project or setting up Claude Code in an existing repo for the first time.\n\n## When to Use\n\n- First time opening a project with Claude Code\n- Joining a\n\nSkill: coding-standards\n# Coding Standards & Best Practices\n\nBaseline coding conventions applicable across projects.\n\nThis skill is the shared floor, not the detailed framework playbook.\n\n- Use `frontend-patterns` for React, state, forms, rendering, and UI architecture.\n- Use `backend-patterns` or `api-design` for reposito\n\nSkill: cpp-coding-standards\n# C++ Coding Standards (C++ Core Guidelines)\n\nComprehensive coding standards for modern C++ (C++17/20/23) derived from the [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines). Enforces type safety, resource safety, immutability, and clarity.\n\n## When to Use\n\n- Writing\n\nReguli:\n---\npaths:\n  - \"**/*.ets\"\n  - \"**/*.ts\"\n  - \"**/module.json5\"\n  - \"**/oh-package.json5\"\n  - \"**/build-profile.json5\"\n---\n# HarmonyOS / ArkTS Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with HarmonyOS and ArkTS-specific content.\n## ArkTS Language Constraints\n---\npaths:\n  - \"**/*.ts\"\n  - \"**/*.tsx\"\n  - \"**/*.js\"\n  - \"**/*.jsx\"\n---\n# TypeScript/JavaScript Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with TypeScript/JavaScript specific content.\n## Types and Interfaces\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
+      "agent": "build-error-resolver",
+      "status": "pending"
+    },
+    {
+      "id": "cf3cbe4d",
+      "desc": "Fișier: frontend/lib/api.ts\nVerificare acces proprietăți pe index signature (API_BASE_URL, success) și corectare cu bracket notation dacă e cazul\n\nSkill-uri relevante:\nSkill: accessibility\n# Accessibility (WCAG 2.2)\n\nThis skill ensures that digital interfaces are Perceivable, Operable, Understandable, and Robust (POUR) for all users, including those using screen readers, switch controls, or keyboard navigation. It focuses on the technical implementation of WCAG 2.2 success criteria.\n\n\n\nSkill: agent-architecture-audit\n# Agent Architecture Audit\n\nA diagnostic workflow for agent systems that hide failures behind wrapper layers, stale memory, retry loops, or transport/rendering mutations.\n\n## When to Activate\n\n**MANDATORY for:**\n- Releasing any agent or LLM-powered application to production\n- Shipping features with \n\nSkill: agent-eval\n# Agent Eval Skill\n\nA lightweight CLI tool for comparing coding agents head-to-head on reproducible tasks. Every \"which coding agent is best?\" comparison runs on vibes — this tool systematizes it.\n\n## When to Activate\n\n- Comparing coding agents (Claude Code, Aider, Codex, etc.) on your own codebase\n\n\nReguli:\n---\npaths:\n  - \"**/*.ets\"\n  - \"**/*.ts\"\n  - \"**/module.json5\"\n  - \"**/oh-package.json5\"\n  - \"**/build-profile.json5\"\n---\n# HarmonyOS / ArkTS Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with HarmonyOS and ArkTS-specific content.\n## ArkTS Language Constraints\n---\npaths:\n  - \"**/*.pl\"\n  - \"**/*.pm\"\n  - \"**/*.t\"\n  - \"**/*.psgi\"\n  - \"**/*.cgi\"\n---\n# Perl Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with Perl-specific content.\n- Always `use v5.36` (enables `strict`, `warnings`, `say`, subroutine signatures)\n- Use subroutine signatures — never unpack `@_` manually\n- Prefer `say` over `print` with explicit newlines\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
+      "agent": "react-build-resolver",
+      "status": "pending"
+    },
+    {
+      "id": "05d7db85",
+      "desc": "Fișier: frontend/app/admin/dashboard/components/ContactEditor.tsx\nVerificare acces index signature (errors['email'], errors['phone'], etc.) și tipul `error` în componenta Field\n\nSkill-uri relevante:\nSkill: accessibility\n# Accessibility (WCAG 2.2)\n\nThis skill ensures that digital interfaces are Perceivable, Operable, Understandable, and Robust (POUR) for all users, including those using screen readers, switch controls, or keyboard navigation. It focuses on the technical implementation of WCAG 2.2 success criteria.\n\n\n\nSkill: dashboard-builder\n# Dashboard Builder\n\nUse this when the task is to build a dashboard people can operate from.\n\nThe goal is not \"show every metric.\" The goal is to answer:\n\n- is it healthy?\n- where is the bottleneck?\n- what changed?\n- what action should someone take?\n\n## When to Use\n\n- \"Build a Kafka monitoring dashb\n\nSkill: email-ops\n# Email Ops\n\nUse this when the real task is mailbox work: triage, drafting, replying, sending, or proving a message landed in Sent.\n\nThis is not a generic writing skill. It is an operator workflow around the actual mail surface.\n\n## Skill Stack\n\nPull these ECC-native skills into the workflow when re\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
+      "agent": "react-build-resolver",
+      "status": "pending"
+    },
+    {
+      "id": "bfa07ddb",
+      "desc": "Fișier: frontend/app/admin/dashboard/page.tsx\nVerificare erori FooterColumnData, index signature, unused variables și tipul Field.error\n\nSkill-uri relevante:\nSkill: dashboard-builder\n# Dashboard Builder\n\nUse this when the task is to build a dashboard people can operate from.\n\nThe goal is not \"show every metric.\" The goal is to answer:\n\n- is it healthy?\n- where is the bottleneck?\n- what changed?\n- what action should someone take?\n\n## When to Use\n\n- \"Build a Kafka monitoring dashb\n\nSkill: error-handling\n# Error Handling Patterns\n\nConsistent, robust error handling patterns for production applications.\n\n## When to Activate\n\n- Designing error types or exception hierarchies for a new module or service\n- Adding retry logic or circuit breakers for unreliable external dependencies\n- Reviewing API endpoint\n\nSkill: frontend-a11y\n# Frontend Accessibility Patterns\n\nPractical accessibility patterns for React and Next.js. Covers the issues most commonly flagged in code review: missing form labels, incorrect ARIA usage, non-semantic interactive elements, and broken keyboard navigation.\n\n## When to Activate\n\n- Building or reviewi\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
+      "agent": "react-build-resolver",
+      "status": "pending"
+    },
+    {
+      "id": "19ef422c",
+      "desc": "frontend/app/admin/layout.tsx + frontend/app/admin/page.tsx + frontend/components/Particles.tsx - Eliminare variabile neutilizate (sidebarOpen, router, Connection)\n\nSkill-uri relevante:\nSkill: connections-optimizer\n# Connections Optimizer\n\nReorganize the user's network instead of treating outbound as a one-way prospecting list.\n\nThis skill handles:\n\n- X following cleanup and expansion\n- LinkedIn follow and connection analysis\n- review-first prune queues\n- add and follow recommendations\n- warm-path identificati\n\nSkill: frontend-a11y\n# Frontend Accessibility Patterns\n\nPractical accessibility patterns for React and Next.js. Covers the issues most commonly flagged in code review: missing form labels, incorrect ARIA usage, non-semantic interactive elements, and broken keyboard navigation.\n\n## When to Activate\n\n- Building or reviewi\n\nSkill: frontend-design-direction\n# Frontend Design Direction\n\nUse this skill when the work is not just making UI function, but making it feel\npurposeful, polished, and appropriate to the product domain.\n\nSource: salvaged from stale community PR #1659 by `linus707`.\n\nNote: ECC intentionally does not rebundle the canonical Anthropic\n\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
+      "agent": "code-simplifier",
+      "status": "pending"
     }
   ],
   "plan": [],
   "status": "completed",
   "checkpoint": {
-    "step": 1,
+    "step": 6,
     "files": {
       ".node-version": "183ee5c38f5718616e4d909d5298b395",
       "generated.js": "61fcabba742c7f6106bf67a7f03394ed",
       "package.json": "f18baa550fabe7aa7e0df44824366131",
       "plan.md": "7cbb9a1c21fddc8c9e8afaefe5ecb594",
       "README.md": "65497368b705c079ba92552d77f40c02",
-      "state.json": "1b14d07f35bef3100f747c45ddc283fb",
+      "state.json": "3a6d7b448fb4b3b722ff75745a46ccee",
       "tsc-errors-full.txt": "9b5b49c4d640ac3fd6f9003f06f5f890",
       "tsc-errors.txt": "d41d8cd98f00b204e9800998ecf8427e",
       "backend\\package.json": "a85789d5dd4a34c0d045f728034fb3df",
@@ -125,17 +222,17 @@
       "frontend\\tailwind.config.ts": "e468b8337e6059146fc0ff1cf2beed40",
       "frontend\\tsc-errors.txt": "d41d8cd98f00b204e9800998ecf8427e",
       "frontend\\tsconfig.json": "170d6005f97f4e64d83ae766a478c132",
-      "frontend\\tsconfig.tsbuildinfo": "c60507863f977aaf9b602348d177329f",
+      "frontend\\tsconfig.tsbuildinfo": "7165b43dc5acb8db4d1bf66fb17b2cb9",
       "frontend\\app\\globals.css": "8227189b7d6c24de91c006d6b21ca273",
       "frontend\\app\\layout.tsx": "f4f6d649b9728f1bf3497e1206abaa60",
       "frontend\\app\\loading.tsx": "90fb3adf9dbfb2636372c17ed3454675",
       "frontend\\app\\not-found.tsx": "947f3283ad458bec188156dc6e9c4c36",
       "frontend\\app\\page.tsx": "1b3a6000441ff931aa247f4748f8895a",
       "frontend\\app\\providers.tsx": "d9abf05f9285c44600117cbdb6091a35",
-      "frontend\\app\\admin\\layout.tsx": "b1ad84d36346eb542e902e24d3d06b23",
+      "frontend\\app\\admin\\layout.tsx": "c6785cc750a777c845dd0ca8f6444dee",
       "frontend\\app\\admin\\page.tsx": "e2ce0c8f2a530756d6525fac66e8b8d4",
-      "frontend\\app\\admin\\dashboard\\page.tsx": "d9513dcb5c9063e1d5f6f435e24b5681",
-      "frontend\\app\\admin\\dashboard\\components\\ContactEditor.tsx": "b178bf9837d36927fea3292f2a340292",
+      "frontend\\app\\admin\\dashboard\\page.tsx": "b00040243aec0c496f5ce0d006fa5968",
+      "frontend\\app\\admin\\dashboard\\components\\ContactEditor.tsx": "5ef250848f468f2be7ebf199cf270a70",
       "frontend\\app\\admin\\dashboard\\components\\FAQEditor.tsx": "a50f8cd6cb97edb8e9aa1dc942909b7e",
       "frontend\\app\\admin\\dashboard\\components\\HeroEditor.tsx": "791aeec054595fe0756a9a7442139d16",
       "frontend\\app\\admin\\dashboard\\components\\MessagesViewer.tsx": "a6573810be73b23232e48a02a0ba1df1",
@@ -157,8 +254,47 @@
       "frontend\\components\\Services.tsx": "ebf3f58f501fb5d33956d4c8f2c16124",
       "frontend\\components\\TiltCard.tsx": "0e15dedef303ec4c8178db2fdba4d8b4",
       "frontend\\lib\\api.ts": "63e9265a62577edc9b4141916ecd6f1a",
-      "frontend\\lib\\fallback.ts": "147720064b13c5852098e4decc6d07a2",
-      "frontend\\lib\\types.ts": "4eb03071b9014ebe1732baaa2f78e62e",
+      "frontend\\lib\\fallback.ts": "5fcd89d1182c65f72bc0023014750626",
+      "frontend\\lib\\types.ts": "89c45a8b344630847fc33b08cb6e384c",
+      "frontend\\out\\404.html": "0766327b8e750399519c485670fb6ded",
+      "frontend\\out\\index.html": "32113bc817f21358a7c03181fd22e87d",
+      "frontend\\out\\index.txt": "60dc2cbf8505721b1696213784f608d7",
+      "frontend\\out\\404\\index.html": "0766327b8e750399519c485670fb6ded",
+      "frontend\\out\\admin\\index.html": "02cfe4b98387e29b072c2b560d1aff6e",
+      "frontend\\out\\admin\\index.txt": "303608fb6d12cd2605fb471de7e49d6c",
+      "frontend\\out\\admin\\dashboard\\index.html": "a6206315a40a871f11fff218b210d54f",
+      "frontend\\out\\admin\\dashboard\\index.txt": "b78e30ebb4fdb107145c7bebab7ba66a",
+      "frontend\\out\\images\\404-bg.jpg": "935881240ce1ed166572b5f64fb90a52",
+      "frontend\\out\\images\\contact-bg.jpg": "bf5ea9a359039b834e0585d101526a59",
+      "frontend\\out\\images\\hero-poster.jpg": "c05e8d739170070b0eb52e9ad6e9880b",
+      "frontend\\out\\images\\portfolio-1.jpg": "cfb7e155292d0e65924ad005cd6f1a1f",
+      "frontend\\out\\images\\portfolio-2.jpg": "0049056899099f37c59fa9665fef0c35",
+      "frontend\\out\\images\\portfolio-3.jpg": "0ecf32286d5a4de95a8a2e0068288932",
+      "frontend\\out\\video\\hero-bg.mp4": "10ea5ba1504d9c27d00f9ba99e9703b2",
+      "frontend\\out\\_next\\static\\chunks\\117-e173c366e2bfd494.js": "56e277adf756f05c504f3b31b8b9a19e",
+      "frontend\\out\\_next\\static\\chunks\\366-37a3ed3374e70648.js": "6741b8ad6481c8ccf1cb504997950ba9",
+      "frontend\\out\\_next\\static\\chunks\\653-db462f6b716f4458.js": "26129fde5d026d92726148503997c6da",
+      "frontend\\out\\_next\\static\\chunks\\716-780dcaf08cb84c18.js": "2cbb3deab3c3efa0ed1a85fa73a4317d",
+      "frontend\\out\\_next\\static\\chunks\\997-2f11e3422ca2001c.js": "d1b94669d3b8f3bc041d94deacad28e1",
+      "frontend\\out\\_next\\static\\chunks\\fd9d1056-b11b2651f33aae7f.js": "d70ea42503ecdf865cc5b50951e7a260",
+      "frontend\\out\\_next\\static\\chunks\\framework-f66176bb897dc684.js": "bf0dbea2c1509e290fc7ddbdd9477a3b",
+      "frontend\\out\\_next\\static\\chunks\\main-a613f9b690e7eb88.js": "8da8d0fbce14f5d38827422f75b1de63",
+      "frontend\\out\\_next\\static\\chunks\\main-app-4058d486245e61c5.js": "14e6271a53d8ff7cd8c32bce63d2ca98",
+      "frontend\\out\\_next\\static\\chunks\\polyfills-42372ed130431b0a.js": "846118c33b2c0e922d7b3a7676f81f6f",
+      "frontend\\out\\_next\\static\\chunks\\webpack-c81f7fd28659d64f.js": "48a0efa196e3561eba1491f20e632cbb",
+      "frontend\\out\\_next\\static\\chunks\\app\\layout-2ee5d481507d9660.js": "0744ba08c47dc6997e0b3186bd09a56a",
+      "frontend\\out\\_next\\static\\chunks\\app\\loading-da8d12b97a9959d5.js": "f919ed200b8f8830a90c05e465c00cc6",
+      "frontend\\out\\_next\\static\\chunks\\app\\not-found-1e9e5689fbefea0c.js": "005eab06be24ce0ef76782ecf813f0d3",
+      "frontend\\out\\_next\\static\\chunks\\app\\page-c1b5fb9ed904417c.js": "b95824bdc7344690699fd29ab13adc95",
+      "frontend\\out\\_next\\static\\chunks\\app\\admin\\layout-1fbec87a96e29c2c.js": "9405817675b949aade3f64c4f77c4e68",
+      "frontend\\out\\_next\\static\\chunks\\app\\admin\\page-bbb838a11ce76d63.js": "0f9c8819d4fa4a0b3a5ddc38e894cefd",
+      "frontend\\out\\_next\\static\\chunks\\app\\admin\\dashboard\\page-18bd232279b6d9e5.js": "ed2bf6ee5c9f6ccd66f543a6e3763cc1",
+      "frontend\\out\\_next\\static\\chunks\\app\\_not-found\\page-c1bbe1b4bc8170a6.js": "2fe8743e2755761cd119d8c4ed6770e6",
+      "frontend\\out\\_next\\static\\chunks\\pages\\_app-72b849fbd24ac258.js": "05d5b2f0ba56f113727492764735dcbb",
+      "frontend\\out\\_next\\static\\chunks\\pages\\_error-7ba65e1336b92748.js": "67ec72307d2c56138924cecc32ab91f9",
+      "frontend\\out\\_next\\static\\css\\305999306bd4682b.css": "e8b59be2bb085e9680e534068ef7deb2",
+      "frontend\\out\\_next\\static\\nx0838UFes7v0EjjiC26X\\_buildManifest.js": "5ff19a08f918fd3dd3651976d5c76199",
+      "frontend\\out\\_next\\static\\nx0838UFes7v0EjjiC26X\\_ssgManifest.js": "b404e23d62d95bafd03ad7747cc0e88b",
       "frontend\\public\\images\\404-bg.jpg": "935881240ce1ed166572b5f64fb90a52",
       "frontend\\public\\images\\contact-bg.jpg": "bf5ea9a359039b834e0585d101526a59",
       "frontend\\public\\images\\hero-poster.jpg": "c05e8d739170070b0eb52e9ad6e9880b",
@@ -184,5 +320,5 @@
     }
   },
   "modified_files": {},
-  "updated": 1782340456.5749063
+  "updated": 1782342926.27731
 }

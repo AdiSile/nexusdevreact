@@ -37,7 +37,7 @@ interface SocialFormData {
 }
 
 interface FormErrors {
-  [field: string]: string;
+  [field: string]: string | undefined;
 }
 
 type PreviewMode = "desktop" | "mobile";

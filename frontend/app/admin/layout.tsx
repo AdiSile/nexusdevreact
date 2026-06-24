@@ -42,10 +42,8 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleSidebar = useCallback(() => setSidebarOpen((prev) => !prev), []);
   const toggleMobileMenu = useCallback(
     () => setMobileMenuOpen((prev) => !prev),
     [],
@@ -82,16 +80,10 @@ export default function AdminLayout({
           ═════════════════════════════════════════ */}
 
       {/* ── Desktop sidebar ── */}
-      <aside
-        className={`
-          hidden lg:flex flex-col fixed inset-y-0 left-0 z-30
-          transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]
-          ${sidebarOpen ? "w-64" : "w-[72px]"}
-        `}
-      >
+      <aside className="hidden lg:flex flex-col fixed inset-y-0 left-0 z-30 w-64">
         <SidebarContent
-          isOpen={sidebarOpen}
-          onToggle={toggleSidebar}
+          isOpen={true}
+          onToggle={closeMobileMenu}
           navItems={ADMIN_NAV_ITEMS}
           pathname={pathname}
         />
@@ -121,13 +113,7 @@ export default function AdminLayout({
       {/* ═════════════════════════════════════════
           CONȚINUT PRINCIPAL
           ═════════════════════════════════════════ */}
-      <div
-        className={`
-          flex-1 flex flex-col min-h-screen transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]
-          lg:ml-64
-          ${sidebarOpen ? "lg:ml-64" : "lg:ml-[72px]"}
-        `}
-      >
+      <div className="flex-1 flex flex-col min-h-screen lg:ml-64">
         {/* ── Top Bar ── */}
         <TopBar
           currentPage={currentPage}
@@ -189,22 +175,16 @@ function SidebarContent({
           )}
         </Link>
 
-        {/* Toggle collapse (desktop) / close (mobil) */}
-        <button
-          onClick={onToggle}
-          className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-white/50 hover:text-white/80 hover:bg-white/10 hover:border-white/15 transition-all duration-200 flex-shrink-0"
-          aria-label={isMobile ? "Închide meniul" : isOpen ? "Restrânge sidebar" : "Extinde sidebar"}
-        >
-          {isMobile ? (
+        {/* Toggle – doar pe mobil (close) */}
+        {isMobile && (
+          <button
+            onClick={onToggle}
+            className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-white/50 hover:text-white/80 hover:bg-white/10 hover:border-white/15 transition-all duration-200 flex-shrink-0"
+            aria-label="Închide meniul"
+          >
             <i className="fa-solid fa-xmark text-xs" />
-          ) : (
-            <i
-              className={`fa-solid text-xs ${
-                isOpen ? "fa-angles-left" : "fa-angles-right"
-              }`}
-            />
-          )}
-        </button>
+          </button>
+        )}
       </div>
 
       {/* ── Navigare ── */}
@@ -220,13 +200,10 @@ function SidebarContent({
               isActive
                 ? "bg-nexus-accent/15 border border-nexus-accent/25 text-white shadow-[0_0_12px_rgba(108,60,225,0.15)]"
                 : "text-white/50 hover:text-white/85 hover:bg-white/5 border border-transparent"
-            } ${!isOpen && !isMobile ? "justify-center" : ""}`,
+            }`,
           };
           if (isMobile) {
-            linkProps.onClick = onToggle;
-          }
-          if (!isOpen && !isMobile) {
-            linkProps.title = item.label;
+            linkProps['onClick'] = onToggle;
           }
 
           return (
@@ -242,14 +219,12 @@ function SidebarContent({
               />
 
               {/* Label */}
-              {(isOpen || isMobile) && (
-                <span className="text-sm font-medium truncate flex-1">
-                  {item.label}
-                </span>
-              )}
+              <span className="text-sm font-medium truncate flex-1">
+                {item.label}
+              </span>
 
               {/* Badge */}
-              {item.badge && (isOpen || isMobile) && (
+              {item.badge && (
                 <span
                   className={`
                     text-[10px] font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0
@@ -280,37 +255,28 @@ function SidebarContent({
           href="/"
           target="_blank"
           rel="noopener noreferrer"
-          className={`
-            flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/40 hover:text-white/75 
-            hover:bg-white/5 border border-transparent hover:border-white/8 transition-all duration-200 group
-            ${!isOpen && !isMobile ? "justify-center" : ""}
-          `}
-          title={(!isOpen && !isMobile ? "Vezi site-ul public" : undefined) as string | undefined}
+          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/40 hover:text-white/75 hover:bg-white/5 border border-transparent hover:border-white/8 transition-all duration-200 group"
         >
           <i className="fa-solid fa-arrow-up-right-from-square text-xs w-4 text-center flex-shrink-0 group-hover:text-nexus-glow" />
-          {(isOpen || isMobile) && (
-            <span className="text-xs font-medium truncate">Vezi site-ul</span>
-          )}
+          <span className="text-xs font-medium truncate">Vezi site-ul</span>
         </Link>
 
         {/* Info versiune / user */}
-        {(isOpen || isMobile) && (
-          <div className="mt-3 px-3 py-2.5 rounded-lg bg-white/[0.02] border border-white/5">
-            <div className="flex items-center gap-2">
-              <span className="w-6 h-6 rounded-full bg-nexus-accent/20 border border-nexus-accent/25 flex items-center justify-center text-[10px] font-bold text-nexus-glow">
-                A
-              </span>
-              <div className="min-w-0">
-                <p className="text-xs font-medium text-white/70 truncate">
-                  Admin
-                </p>
-                <p className="text-[10px] text-white/30 font-mono">
-                  v1.0.0
-                </p>
-              </div>
+        <div className="mt-3 px-3 py-2.5 rounded-lg bg-white/[0.02] border border-white/5">
+          <div className="flex items-center gap-2">
+            <span className="w-6 h-6 rounded-full bg-nexus-accent/20 border border-nexus-accent/25 flex items-center justify-center text-[10px] font-bold text-nexus-glow">
+              A
+            </span>
+            <div className="min-w-0">
+              <p className="text-xs font-medium text-white/70 truncate">
+                Admin
+              </p>
+              <p className="text-[10px] text-white/30 font-mono">
+                v1.0.0
+              </p>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
