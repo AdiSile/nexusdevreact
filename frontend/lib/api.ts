@@ -16,7 +16,7 @@ import type { NexusSettings } from './fallback';
  *  în producție e același origin (backend-ul servește și frontend-ul). */
 const API_BASE_URL: string =
   typeof window === 'undefined'
-    ? process.env.API_BASE_URL || 'http://localhost:4000'
+    ? process.env['API_BASE_URL'] || 'http://localhost:4000'
     : '/api';
 
 /** Timeout implicit pentru cereri (ms) */
@@ -243,7 +243,7 @@ async function fetchApi<T = unknown>(
 function isApiResponseLike<T>(value: unknown): value is ApiResponse<T> {
   if (value === null || typeof value !== 'object') return false;
   const obj = value as Record<string, unknown>;
-  return typeof obj.success === 'boolean';
+  return typeof obj['success'] === 'boolean';
 }
 
 // ═══════════════════════════════════════════════

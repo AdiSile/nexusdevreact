@@ -214,21 +214,25 @@ function SidebarContent({
             pathname === item.href ||
             (item.href !== "/admin" && pathname.startsWith(item.href));
 
+          const linkProps: Record<string, unknown> = {
+            href: item.href,
+            className: `flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group relative ${
+              isActive
+                ? "bg-nexus-accent/15 border border-nexus-accent/25 text-white shadow-[0_0_12px_rgba(108,60,225,0.15)]"
+                : "text-white/50 hover:text-white/85 hover:bg-white/5 border border-transparent"
+            } ${!isOpen && !isMobile ? "justify-center" : ""}`,
+          };
+          if (isMobile) {
+            linkProps.onClick = onToggle;
+          }
+          if (!isOpen && !isMobile) {
+            linkProps.title = item.label;
+          }
+
           return (
             <Link
               key={item.href}
-              href={item.href}
-              onClick={isMobile ? onToggle : undefined}
-              className={`
-                flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group relative
-                ${
-                  isActive
-                    ? "bg-nexus-accent/15 border border-nexus-accent/25 text-white shadow-[0_0_12px_rgba(108,60,225,0.15)]"
-                    : "text-white/50 hover:text-white/85 hover:bg-white/5 border border-transparent"
-                }
-                ${!isOpen && !isMobile ? "justify-center" : ""}
-              `}
-              title={!isOpen && !isMobile ? item.label : undefined}
+              {...(linkProps as unknown as React.ComponentPropsWithoutRef<typeof Link>)}
             >
               {/* Icon */}
               <i
@@ -281,7 +285,7 @@ function SidebarContent({
             hover:bg-white/5 border border-transparent hover:border-white/8 transition-all duration-200 group
             ${!isOpen && !isMobile ? "justify-center" : ""}
           `}
-          title={!isOpen && !isMobile ? "Vezi site-ul public" : undefined}
+          title={(!isOpen && !isMobile ? "Vezi site-ul public" : undefined) as string | undefined}
         >
           <i className="fa-solid fa-arrow-up-right-from-square text-xs w-4 text-center flex-shrink-0 group-hover:text-nexus-glow" />
           {(isOpen || isMobile) && (

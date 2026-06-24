@@ -62,30 +62,30 @@ export interface ServiceFeature {
 export interface ServicePricingTier {
   name: string;
   price: string;
-  currency?: string;
-  interval?: "one-time" | "monthly" | "yearly" | "per-project";
+  currency?: string | undefined;
+  interval?: "one-time" | "monthly" | "yearly" | "per-project" | undefined;
   features: readonly string[];
-  highlighted?: boolean;
-  ctaLabel?: string;
-  ctaHref?: string;
+  highlighted?: boolean | undefined;
+  ctaLabel?: string | undefined;
+  ctaHref?: string | undefined;
 }
 
 export interface Service {
   id: string;
   slug: string;
   title: string;
-  subtitle?: string;
+  subtitle?: string | undefined;
   description: string;
-  longDescription?: string;
-  icon?: string;
-  imageUrl?: string;
+  longDescription?: string | undefined;
+  icon?: string | undefined;
+  imageUrl?: string | undefined;
   features: readonly ServiceFeature[];
-  techStack?: readonly string[];
-  pricing?: readonly ServicePricingTier[];
+  techStack?: readonly string[] | undefined;
+  pricing?: readonly ServicePricingTier[] | undefined;
   order: number;
   isActive: boolean;
-  createdAt?: string;
-  updatedAt?: string;
+  createdAt?: string | undefined;
+  updatedAt?: string | undefined;
 }
 
 // ═══════════════════════════════════════════════
@@ -97,12 +97,12 @@ export interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
-  icon?: string;
-  imageUrl?: string;
-  duration?: string;
-  deliverables?: readonly string[];
-  tools?: readonly string[];
-  highlightColor?: string;
+  icon?: string | undefined;
+  imageUrl?: string | undefined;
+  duration?: string | undefined;
+  deliverables?: readonly string[] | undefined;
+  tools?: readonly string[] | undefined;
+  highlightColor?: string | undefined;
 }
 
 // ═══════════════════════════════════════════════
@@ -113,10 +113,10 @@ export interface FAQItem {
   id: string;
   question: string;
   answer: string;
-  category?: string;
+  category?: string | undefined;
   order: number;
   isActive: boolean;
-  relatedServiceIds?: readonly string[];
+  relatedServiceIds?: readonly string[] | undefined;
 }
 
 // ═══════════════════════════════════════════════
@@ -126,44 +126,44 @@ export interface FAQItem {
 export interface PortfolioMediaItem {
   type: "image" | "video";
   url: string;
-  alt?: string;
-  poster?: string;
-  width?: number;
-  height?: number;
+  alt?: string | undefined;
+  poster?: string | undefined;
+  width?: number | undefined;
+  height?: number | undefined;
 }
 
 export interface PortfolioTestimonial {
   author: string;
-  role?: string;
-  company?: string;
+  role?: string | undefined;
+  company?: string | undefined;
   quote: string;
-  avatarUrl?: string;
+  avatarUrl?: string | undefined;
 }
 
 export interface PortfolioItem {
   id: string;
   slug: string;
   title: string;
-  subtitle?: string;
+  subtitle?: string | undefined;
   description: string;
-  challenge?: string;
-  solution?: string;
-  results?: readonly string[];
+  challenge?: string | undefined;
+  solution?: string | undefined;
+  results?: readonly string[] | undefined;
   category: string;
   tags: readonly string[];
   media: readonly PortfolioMediaItem[];
-  thumbnailUrl?: string;
-  liveUrl?: string;
-  repoUrl?: string;
-  testimonial?: PortfolioTestimonial;
+  thumbnailUrl?: string | undefined;
+  liveUrl?: string | undefined;
+  repoUrl?: string | undefined;
+  testimonial?: PortfolioTestimonial | undefined;
   serviceIds: readonly string[];
-  clientName?: string;
-  completionDate?: string;
+  clientName?: string | undefined;
+  completionDate?: string | undefined;
   order: number;
   isFeatured: boolean;
   isActive: boolean;
-  createdAt?: string;
-  updatedAt?: string;
+  createdAt?: string | undefined;
+  updatedAt?: string | undefined;
 }
 
 // ═══════════════════════════════════════════════
@@ -205,23 +205,23 @@ export type PromoStyle = "info" | "success" | "warning" | "highlight" | "gradien
 export interface PromoAction {
   label: string;
   href: string;
-  variant?: "primary" | "secondary" | "ghost" | "gold";
-  external?: boolean;
+  variant?: "primary" | "secondary" | "ghost" | "gold" | undefined;
+  external?: boolean | undefined;
 }
 
 export interface GlobalPromo {
   id: string;
   text: string;
-  subtext?: string;
+  subtext?: string | undefined;
   style: PromoStyle;
-  action?: PromoAction;
+  action?: PromoAction | undefined;
   dismissible: boolean;
-  expiresAt?: string;
+  expiresAt?: string | undefined;
   isActive: boolean;
-  pagesExclude?: readonly string[];
+  pagesExclude?: readonly string[] | undefined;
   order: number;
-  createdAt?: string;
-  updatedAt?: string;
+  createdAt?: string | undefined;
+  updatedAt?: string | undefined;
 }
 
 // ═══════════════════════════════════════════════

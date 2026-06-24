@@ -49,6 +49,31 @@
       "role": "assistant",
       "content": "✅ 1 fișiere generate.",
       "timestamp": 1782339635.5630434
+    },
+    {
+      "role": "user",
+      "content": "Repară eroarea de compilare TypeScript din proiectul „Nexus Dev Studio\".  1. **`frontend/app/admin/dashboard/components/ContactEditor.tsx`:**    - La liniile 228, 230, și oriunde altundeva `errs.email` este folosit, înlocuiește `errs.email` cu `errs['email']`.    - Fă aceeași modificare pentru orice altă proprietate a obiectului `errs` care este accesată cu notația punctată (ex: `errs.phone` → `errs['phone']`, `errs.name` → `errs['name']`, etc.).  2. **Verifică și repară orice altă eroare de compilare TypeScript:**    - Rulează `npm run build` în folderul `frontend/` și repară orice eroare similară (acces cu notație punctată pe obiecte cu index signature).    - Dacă găsești și alte erori de compilare, repară-le.  3. **După terminare, returnează fișierele modificate în formatul:** ### cale/relativă/la/fișier.ext conținut complet ### END",
+      "timestamp": 1782339994.9269385
+    },
+    {
+      "role": "system",
+      "content": "🚀 Proiect pornit: Proiect: nexusdevstudio-sillicon-valley-ro",
+      "timestamp": 1782339994.9409318
+    },
+    {
+      "role": "user",
+      "content": "În fișierul `frontend/app/admin/dashboard/components/ContactEditor.tsx`, înlocuiește `errs.email` cu `errs['email']` peste tot unde apare. Nu modifica nimic altceva.",
+      "timestamp": 1782340379.2203808
+    },
+    {
+      "role": "system",
+      "content": "🚀 Proiect pornit: Proiect: nexusdevstudio-sillicon-valley-ro",
+      "timestamp": 1782340379.2361116
+    },
+    {
+      "role": "assistant",
+      "content": "✅ Pas 1 (tdd-guide): 1 fișiere salvate.",
+      "timestamp": 1782340456.6024663
     }
   ],
   "cerinta": "Creează proiectul complet „Nexus Dev Studio\" de la zero, ca o aplicație web modernă, scalabilă și imersivă, demnă de un startup din Silicon Valley. Folosește **Next.js 14+ (App Router) cu React 18+ și TypeScript** pentru frontend, **Node.js cu Express și SQLite** pentru backend, și **Tailwind CSS** pentru stilizare. Toate componentele vor fi găzduite într-un **monorepo** cu foldere separate pentru `frontend` și `backend`. Site-ul trebuie să fie o singură pagină (SPA-like) cu tranziții fluide, design glassmorphism premium, particule canvas mov/aurii, cursor personalizat și fără emoji-uri – doar iconițe Font Awesome. Securitate modernă, performanță maximă, responsive perfect.  1. **Arhitectură generală:**    - `backend/`: Express + SQLite (better-sqlite3). Servește API-ul RESTful și, opțional, fișierele statice ale frontend-ului în producție.    - `frontend/`: Next.js 14 cu App Router. Conține paginile publice (o singură pagină principală) și panoul de administrare.    - Baza de date: un fișier SQLite în `backend/data/nexus.db`. Conține tabelele `settings` și `users`.    - Autentificare: JWT stocat în cookie-uri HttpOnly/Secure/SameSite=Strict. Rutele API de admin sunt protejate.    - Toate datele dinamice (texte, servicii, reduceri, FAQ, etc.) sunt stocate într-un singur obiect JSON în coloana `data` a tabelului `settings` și expuse prin API-ul `/api/settings`.  2. **Backend (Node.js + Express + SQLite):**    - `backend/config/db.js`: inițializare curată a bazei de date. Creează tabelele `settings` și `users` dacă nu există. La prima pornire, dacă `settings` este goală, o populezi cu valorile implicite complete (identitate freelancer, cele 21 de servicii cu prețuri și reduceri, proces, FAQ, contact, SEO, footer etc.). Dacă `users` este goală, creezi adminul implicit `nexusdevstudio@admin.ro` / `.salataverde123!` (hash bcrypt).    - `backend/routes/settings.js`: `GET /api/settings` returnează JSON-ul complet. `PUT /api/settings` primește un obiect parțial, face merge și salvează.    - `backend/routes/auth.js`: `POST /api/auth/login` verifică email/parolă, returnează JWT în cookie HttpOnly/Secure/SameSite=Strict. `GET /api/auth/check` verifică token-ul și returnează `{ authenticated: true/false }`. Nu utiliza CSRF.    - `backend/routes/contact.js`: `POST /api/contact` salvează mesajele; `GET /api/contact` le returnează pentru admin.    - Securitate: Helmet (fără CSP personalizat), CORS configurat restrictiv, rate limiting pe auth, prepared statements, validare strictă input, erori generice fără detalii.  3. **Sistem de reduceri și promoții (seed + afișare):**    - Toate cele 21 de servicii cu prețuri normale și reduse, etichete și categorii conform listei finale discutate (20% reducere pentru complexe, 40% pentru simple, valabile până la sfârșitul lui 2026).    - În setări există un obiect `globalPromo` cu câmpurile `active`, `discountPercent`, `label`, `startDate`, `endDate`. Când este activ, reducerile globale se aplică peste cele individuale pe frontend. Panoul de administrare permite activarea/dezactivarea și editarea acestei promoții.  4. **Frontend (Next.js + React + TypeScript + Tailwind CSS):**    - Pagină publică unică (`frontend/app/page.tsx`) care încarcă datele de la `GET /api/settings` și populează toate secțiunile: Hero, Cum lucrăm, Servicii, Portofoliu, Termene, FAQ, Contact, Footer.    - Design imersiv: glassmorphism, particule canvas mov/aurii, cursor personalizat, carduri 3D cu efect de tilt, animații la scroll (Framer Motion), video Hero dinamic (URL din setări).    - Componente separate pentru fiecare secțiune (Hero, Services, Process, Portfolio, FAQ, Contact, Footer).    - Responsive perfect (320px – 2560px), fără emoji-uri, doar Font Awesome.    - Fallback: dacă API-ul nu răspunde, afișează date hardcodate identice cu seed-ul.  5. **Panoul de administrare (frontend/app/admin/):**    - `page.tsx` (login): formular email/parolă, trimite la `/api/auth/login`, redirecționează la dashboard.    - `dashboard/page.tsx`: sidebar cu secțiunile Hero & General, Servicii, Cum lucrăm, FAQ, Portofoliu, Contact, SEO & Footer, Mesaje, Promoții. Fiecare secțiune încarcă datele din API și le salvează prin `PUT /api/settings` (sau endpoint-uri specifice). Toate modificările sunt reflectate instant pe site-ul public după refresh.    - Design identic cu site-ul public (glassmorphism, particule, fără emoji-uri).    - Credențiale: `nexusdevstudio@admin.ro` / `.salataverde123!`.  6. **Build și deploy:**    - Scripturi în `package.json`-ul rădăcină (monorepo) pentru a instala dependențele, a construi frontend-ul și a porni serverul.    - În producție, Express servește fișierele statice exportate de Next.js.    - Fișierul `backend/package.json` conține `\"start\": \"node server.js\"` și `\"engines\": { \"node\": \"20.x\" }`. Creează și fișierul `.node-version` cu `20`.  7. **După terminare, returnează toate fișierele modificate sau create în formatul exact:** cale/relativă/la/fișier.ext conținut complet  END",
@@ -64,6 +89,12 @@
       "desc": "Implementează complet cerința: <｜｜DSML｜｜tool_calls>\n<｜｜DSML｜｜invoke name=\"file_editor\">\n<｜｜DSML｜｜parameter name=\"file_path\" string=\"true\">frontend/components/Particles.tsx</｜｜DSML｜｜parameter>\n<｜｜DSML｜｜parameter name=\"new_text\" string=\"true\">interface Particle {\n  x: number;\n  y: number;\n  vx: number;\n  vy: number;\n  radius: number;\n  color: string;\n  alpha: number;          // opacitate curentă\n  alphaTarget: number;    // țintă pentru pulsare\n  alphaSpeed: number;     // viteză pulsare\n}\n\n/* ─────────────────────────────────────────────\n   Configurație implicită\n   ───────────────────────────────────────────── */</｜｜DSML｜｜parameter>\n<｜｜DSML｜｜parameter name=\"old_text\" string=\"true\">interface Particle {\n  x: number;\n  y: number;\n  vx: number;\n  vy: number;\n  radius: number;\n  color: string;\n  alpha: number;          // opacitate curentă\n  alphaTarget: number;    // țintă pentru pulsare\n  alphaSpeed: number;     // viteză pulsare\n}\n\ninterface Connection {\n  a: number; // index particulă A\n  b: number; // index particulă B\n}\n\n/* ─────────────────────────────────────────────\n   Configurație implicită\n   ───────────────────────────────────────────── */</｜｜DSML｜｜parameter>\n</｜｜DSML｜｜invoke>\n</｜｜DSML｜｜tool_calls>. Generează toate fișierele necesare.\n\nIMPORTANT: Returnează fiecare fișier în formatul:\n### cale/fișier.ext\nconținut\n### END\nFolosește DOAR căi relative la proiect, nu absolute.",
       "agent": "tdd-guide",
       "status": "pending"
+    },
+    {
+      "id": "93b82d1b",
+      "desc": "Fișier: frontend/app/admin/dashboard/components/ContactEditor.tsx\nVerificare și înlocuire `errs.email` → `errs['email']` (nu s-au găsit apariții; fișierul este deja conform)\n\nSkill-uri relevante:\nSkill: accessibility\n# Accessibility (WCAG 2.2)\n\nThis skill ensures that digital interfaces are Perceivable, Operable, Understandable, and Robust (POUR) for all users, including those using screen readers, switch controls, or keyboard navigation. It focuses on the technical implementation of WCAG 2.2 success criteria.\n\n\n\nSkill: agent-architecture-audit\n# Agent Architecture Audit\n\nA diagnostic workflow for agent systems that hide failures behind wrapper layers, stale memory, retry loops, or transport/rendering mutations.\n\n## When to Activate\n\n**MANDATORY for:**\n- Releasing any agent or LLM-powered application to production\n- Shipping features with \n\nSkill: agent-harness-construction\n# Agent Harness Construction\n\nUse this skill when you are improving how an agent plans, calls tools, recovers from errors, and converges on completion.\n\n## Core Model\n\nAgent output quality is constrained by:\n1. Action space quality\n2. Observation quality\n3. Recovery quality\n4. Context budget quality\n\nReguli:\n---\npaths:\n  - \"**/*.ets\"\n  - \"**/*.ts\"\n  - \"**/module.json5\"\n  - \"**/oh-package.json5\"\n  - \"**/build-profile.json5\"\n---\n# HarmonyOS / ArkTS Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with HarmonyOS and ArkTS-specific content.\n## ArkTS Language Constraints\n---\npaths:\n  - \"**/*.cs\"\n  - \"**/*.csx\"\n---\n# C# Coding Style\n> This file extends [common/coding-style.md](../common/coding-style.md) with C#-specific content.\n- Follow current .NET conventions and enable nullable reference types\n- Prefer explicit access modifiers on public and internal APIs\n- Keep files aligned with the primary type they define\n\nIMPORTANT: Returnează fiecare fișier generat/modificat în formatul strict:\n### cale/relativă/la/fișier.ext\nconținutul complet al fișierului\n### END\nNu include explicații în afara blocurilor ###.\nFolosește DOAR căi relative la proiect, nu absolute.\n",
+      "agent": "tdd-guide",
+      "status": "pending"
     }
   ],
   "plan": [],
@@ -76,7 +107,9 @@
       "package.json": "f18baa550fabe7aa7e0df44824366131",
       "plan.md": "7cbb9a1c21fddc8c9e8afaefe5ecb594",
       "README.md": "65497368b705c079ba92552d77f40c02",
-      "state.json": "6f996081da63b3bc7e7a42cfe465b421",
+      "state.json": "1b14d07f35bef3100f747c45ddc283fb",
+      "tsc-errors-full.txt": "9b5b49c4d640ac3fd6f9003f06f5f890",
+      "tsc-errors.txt": "d41d8cd98f00b204e9800998ecf8427e",
       "backend\\package.json": "a85789d5dd4a34c0d045f728034fb3df",
       "backend\\server.js": "61fcabba742c7f6106bf67a7f03394ed",
       "backend\\config\\db.js": "853896842e6fa5bb20cb7f760a6bebde",
@@ -84,21 +117,25 @@
       "backend\\routes\\auth.js": "a1f0dff575f279cda35a23adde9666b1",
       "backend\\routes\\contact.js": "8d40091475baf90bbe0a67fa864a6ab0",
       "backend\\routes\\settings.js": "635da0d89c18b9965e61994a4f58222f",
+      "frontend\\next-env.d.ts": "187b4b5b507c358a018aeeadd81abe57",
       "frontend\\next.config.js": "962e00304e0f51c960719adf424ba3d2",
+      "frontend\\package-lock.json": "22a0c2dcc92edaf4132ddd97ed787075",
       "frontend\\package.json": "29cda3a0db6c311f230a2748473485ad",
       "frontend\\postcss.config.js": "5bebfa7d1b779ab24523c751cfa6204d",
       "frontend\\tailwind.config.ts": "e468b8337e6059146fc0ff1cf2beed40",
-      "frontend\\tsconfig.json": "9b369d7181e12b9a07685c46f39ee6d1",
+      "frontend\\tsc-errors.txt": "d41d8cd98f00b204e9800998ecf8427e",
+      "frontend\\tsconfig.json": "170d6005f97f4e64d83ae766a478c132",
+      "frontend\\tsconfig.tsbuildinfo": "c60507863f977aaf9b602348d177329f",
       "frontend\\app\\globals.css": "8227189b7d6c24de91c006d6b21ca273",
       "frontend\\app\\layout.tsx": "f4f6d649b9728f1bf3497e1206abaa60",
       "frontend\\app\\loading.tsx": "90fb3adf9dbfb2636372c17ed3454675",
       "frontend\\app\\not-found.tsx": "947f3283ad458bec188156dc6e9c4c36",
       "frontend\\app\\page.tsx": "1b3a6000441ff931aa247f4748f8895a",
       "frontend\\app\\providers.tsx": "d9abf05f9285c44600117cbdb6091a35",
-      "frontend\\app\\admin\\layout.tsx": "94e88b4e169213bc4c34029bfb5db2d5",
-      "frontend\\app\\admin\\page.tsx": "35c3a8fa2e451c6869f0edfec7c5f7b6",
-      "frontend\\app\\admin\\dashboard\\page.tsx": "a36cd50a8ad72e1d4742c2983bf3d7a5",
-      "frontend\\app\\admin\\dashboard\\components\\ContactEditor.tsx": "3108c6b4570205573d890eab1a4804b9",
+      "frontend\\app\\admin\\layout.tsx": "b1ad84d36346eb542e902e24d3d06b23",
+      "frontend\\app\\admin\\page.tsx": "e2ce0c8f2a530756d6525fac66e8b8d4",
+      "frontend\\app\\admin\\dashboard\\page.tsx": "d9513dcb5c9063e1d5f6f435e24b5681",
+      "frontend\\app\\admin\\dashboard\\components\\ContactEditor.tsx": "b178bf9837d36927fea3292f2a340292",
       "frontend\\app\\admin\\dashboard\\components\\FAQEditor.tsx": "a50f8cd6cb97edb8e9aa1dc942909b7e",
       "frontend\\app\\admin\\dashboard\\components\\HeroEditor.tsx": "791aeec054595fe0756a9a7442139d16",
       "frontend\\app\\admin\\dashboard\\components\\MessagesViewer.tsx": "a6573810be73b23232e48a02a0ba1df1",
@@ -114,14 +151,14 @@
       "frontend\\components\\Footer.tsx": "95603b6eb710a913391e3cd20d9da5dd",
       "frontend\\components\\GlassCard.tsx": "73157c5acc5d33fb8acf453f6ba3b5f6",
       "frontend\\components\\Hero.tsx": "57c8cfe9d07b97e9cbf6cd301a4972ba",
-      "frontend\\components\\Particles.tsx": "c759d551aa7a1fb33e7be24409edcec8",
+      "frontend\\components\\Particles.tsx": "5f9e4e2a0cb08437df96531c4717d61f",
       "frontend\\components\\Portfolio.tsx": "eb7a12d55e984a5247ce9e86fcce8ba6",
       "frontend\\components\\Process.tsx": "2d8dc593f94c95955c6ee03bb7a66e57",
       "frontend\\components\\Services.tsx": "ebf3f58f501fb5d33956d4c8f2c16124",
       "frontend\\components\\TiltCard.tsx": "0e15dedef303ec4c8178db2fdba4d8b4",
-      "frontend\\lib\\api.ts": "2d830f7d9beffaeb8ce69f6db9c9d50e",
+      "frontend\\lib\\api.ts": "63e9265a62577edc9b4141916ecd6f1a",
       "frontend\\lib\\fallback.ts": "147720064b13c5852098e4decc6d07a2",
-      "frontend\\lib\\types.ts": "bfba3d09f01afc7b80efde785d321ac2",
+      "frontend\\lib\\types.ts": "4eb03071b9014ebe1732baaa2f78e62e",
       "frontend\\public\\images\\404-bg.jpg": "935881240ce1ed166572b5f64fb90a52",
       "frontend\\public\\images\\contact-bg.jpg": "bf5ea9a359039b834e0585d101526a59",
       "frontend\\public\\images\\hero-poster.jpg": "c05e8d739170070b0eb52e9ad6e9880b",
@@ -147,5 +184,5 @@
     }
   },
   "modified_files": {},
-  "updated": 1782339635.54748
+  "updated": 1782340456.5749063
 }

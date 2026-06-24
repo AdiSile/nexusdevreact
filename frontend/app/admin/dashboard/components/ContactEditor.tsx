@@ -225,31 +225,31 @@ export default function ContactEditor({
 
     // Email
     if (!form.email.trim()) {
-      errs.email = "Adresa de email este obligatorie.";
+      errs['email'] = "Adresa de email este obligatorie.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
-      errs.email = "Adresa de email este invalidă.";
+      errs['email'] = "Adresa de email este invalidă.";
     }
 
     // Telefon
     if (!form.phone.trim()) {
-      errs.phone = "Numărul de telefon este obligatoriu.";
+      errs['phone'] = "Numărul de telefon este obligatoriu.";
     } else if (
       form.phone.trim().length < 7 &&
       !/^\+?\d[\d\s\-.]{6,}$/.test(form.phone.trim())
     ) {
-      errs.phone = "Numărul de telefon pare invalid (minim 7 cifre).";
+      errs['phone'] = "Numărul de telefon pare invalid (minim 7 cifre).";
     }
 
     // Adresă
     if (!form.address.trim()) {
-      errs.address = "Adresa este obligatorie.";
+      errs['address'] = "Adresa este obligatorie.";
     } else if (form.address.trim().length < 5) {
-      errs.address = "Adresa trebuie să aibă cel puțin 5 caractere.";
+      errs['address'] = "Adresa trebuie să aibă cel puțin 5 caractere.";
     }
 
     // Program de lucru
     if (!form.workingHours.trim()) {
-      errs.workingHours = "Programul de lucru este obligatoriu.";
+      errs['workingHours'] = "Programul de lucru este obligatoriu.";
     }
 
     // Validare URL-uri social (doar dacă secțiunea e activă)
@@ -426,7 +426,7 @@ export default function ContactEditor({
               <Field
                 label="Email"
                 field="contact-email"
-                error={errors.email}
+                error={errors['email']}
                 required
               >
                 <div className="relative">
@@ -442,9 +442,9 @@ export default function ContactEditor({
                     placeholder="contact@nexusdevstudio.ro"
                     className={`${inputClass("email")} pl-10`}
                     aria-required="true"
-                    aria-invalid={!!errors.email}
+                    aria-invalid={!!errors['email']}
                     aria-describedby={
-                      errors.email ? "contact-email-err" : undefined
+                      errors['email'] ? "contact-email-err" : undefined
                     }
                     autoComplete="email"
                   />
@@ -454,7 +454,7 @@ export default function ContactEditor({
               <Field
                 label="Telefon"
                 field="contact-phone"
-                error={errors.phone}
+                error={errors['phone']}
                 required
               >
                 <div className="relative">
@@ -469,9 +469,9 @@ export default function ContactEditor({
                     placeholder="+40 723 456 789"
                     className={`${inputClass("phone")} pl-10`}
                     aria-required="true"
-                    aria-invalid={!!errors.phone}
+                    aria-invalid={!!errors['phone']}
                     aria-describedby={
-                      errors.phone ? "contact-phone-err" : undefined
+                      errors['phone'] ? "contact-phone-err" : undefined
                     }
                     autoComplete="tel"
                   />
@@ -482,7 +482,7 @@ export default function ContactEditor({
             <Field
               label="Adresă"
               field="contact-address"
-              error={errors.address}
+              error={errors['address']}
               required
             >
               <div className="relative">
@@ -497,9 +497,9 @@ export default function ContactEditor({
                   placeholder="București, România — disponibil remote global."
                   className={`${inputClass("address")} pl-10 resize-none`}
                   aria-required="true"
-                  aria-invalid={!!errors.address}
+                  aria-invalid={!!errors['address']}
                   aria-describedby={
-                    errors.address ? "contact-address-err" : undefined
+                    errors['address'] ? "contact-address-err" : undefined
                   }
                   autoComplete="street-address"
                 />
@@ -509,7 +509,7 @@ export default function ContactEditor({
             <Field
               label="Program de lucru"
               field="contact-hours"
-              error={errors.workingHours}
+              error={errors['workingHours']}
               required
             >
               <div className="relative">
@@ -524,9 +524,9 @@ export default function ContactEditor({
                   placeholder="Luni – Vineri, 09:00 – 18:00 (EET)"
                   className={`${inputClass("workingHours")} pl-10`}
                   aria-required="true"
-                  aria-invalid={!!errors.workingHours}
+                  aria-invalid={!!errors['workingHours']}
                   aria-describedby={
-                    errors.workingHours
+                    errors['workingHours']
                       ? "contact-hours-err"
                       : undefined
                   }
@@ -947,7 +947,7 @@ function Field({
 }: {
   label: string;
   field: string;
-  error?: string;
+  error: string | undefined;
   required?: boolean;
   children: React.ReactNode;
 }) {

@@ -598,10 +598,10 @@ function StudioForm({
 
   const validate = (): boolean => {
     const errs: Record<string, string> = {};
-    if (!form.name.trim()) errs.name = "Numele studioului este obligatoriu.";
+    if (!form.name.trim()) errs['name'] = "Numele studioului este obligatoriu.";
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()))
-      errs.email = "Adresa de email este invalidă.";
-    if (!form.tagline.trim()) errs.tagline = "Tagline-ul este obligatoriu.";
+      errs['email'] = "Adresa de email este invalidă.";
+    if (!form.tagline.trim()) errs['tagline'] = "Tagline-ul este obligatoriu.";
     setErrors(errs);
     return Object.keys(errs).length === 0;
   };
@@ -627,7 +627,7 @@ function StudioForm({
           Identitate
         </legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Field label="Nume Studio" field="s-name" error={errors.name}>
+          <Field label="Nume Studio" field="s-name" error={errors['name']}>
             <input
               id="s-name"
               type="text"
@@ -648,7 +648,7 @@ function StudioForm({
             />
           </Field>
         </div>
-        <Field label="Tagline" field="s-tagline" error={errors.tagline}>
+        <Field label="Tagline" field="s-tagline" error={errors['tagline']}>
           <input
             id="s-tagline"
             type="text"
@@ -676,7 +676,7 @@ function StudioForm({
           Contact
         </legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Field label="Email" field="s-email" error={errors.email}>
+          <Field label="Email" field="s-email" error={errors['email']}>
             <input
               id="s-email"
               type="email"
@@ -820,8 +820,8 @@ function SeoForm({
 
   const validate = (): boolean => {
     const errs: Record<string, string> = {};
-    if (!form.title.trim()) errs.title = "Titlul SEO este obligatoriu.";
-    if (!form.description.trim()) errs.description = "Descrierea SEO este obligatorie.";
+    if (!form.title.trim()) errs['title'] = "Titlul SEO este obligatoriu.";
+    if (!form.description.trim()) errs['description'] = "Descrierea SEO este obligatorie.";
     setErrors(errs);
     return Object.keys(errs).length === 0;
   };
@@ -841,7 +841,7 @@ function SeoForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <Field label="Meta Titlu" field="seo-title" error={errors.title}>
+      <Field label="Meta Titlu" field="seo-title" error={errors['title']}>
         <input
           id="seo-title"
           type="text"
@@ -853,7 +853,7 @@ function SeoForm({
         <CharCount current={form.title.length} max={70} />
       </Field>
 
-      <Field label="Meta Descriere" field="seo-desc" error={errors.description}>
+      <Field label="Meta Descriere" field="seo-desc" error={errors['description']}>
         <textarea
           id="seo-desc"
           rows={3}
@@ -982,7 +982,7 @@ function FooterForm({
     (colIdx: number, value: string) => {
       setForm((prev) => {
         const cols = [...prev.columns];
-        cols[colIdx] = { ...cols[colIdx], title: value };
+        cols[colIdx] = { ...cols[colIdx]!, title: value };
         return { ...prev, columns: cols };
       });
       onDirty();
@@ -994,9 +994,10 @@ function FooterForm({
     (colIdx: number, linkIdx: number, field: "label" | "href", value: string) => {
       setForm((prev) => {
         const cols = [...prev.columns];
-        const links = [...cols[colIdx].links];
-        links[linkIdx] = { ...links[linkIdx], [field]: value };
-        cols[colIdx] = { ...cols[colIdx], links };
+        const col = cols[colIdx]!;
+        const links = [...col.links];
+        links[linkIdx] = { ...links[linkIdx]!, [field]: value };
+        cols[colIdx] = { ...col, links };
         return { ...prev, columns: cols };
       });
       onDirty();
@@ -1257,7 +1258,7 @@ function Field({
 }: {
   label: string;
   field: string;
-  error?: string;
+  error: string | undefined;
   children: React.ReactNode;
 }) {
   return (
