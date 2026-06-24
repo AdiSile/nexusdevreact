@@ -1,0 +1,37 @@
+{
+  "name": "nexus-dev-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nexus Dev Studio - Premium Web Development & Digital Solutions",
+  "author": "Nexus Dev Studio",
+  "license": "UNLICENSED",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && node server.js",
+    "dev:frontend": "cd frontend && npx next dev -p 3000",
+    "dev": "concurrently -n BE,FE -c cyan,magenta \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "cd frontend && npx next build",
+    "start": "NODE_ENV=production node backend/server.js",
+    "deploy": "npm run install:all && npm run build && npm run start",
+    "postinstall": "npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nexusdevstudio/nexus-dev-studio.git"
+  },
+  "keywords": [
+    "web-development",
+    "nexus",
+    "nextjs",
+    "express",
+    "tailwindcss",
+    "digital-solutions"
+  ]
+}
