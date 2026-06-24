@@ -133,7 +133,6 @@ export default function ContactEditor({
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [previewMode, setPreviewMode] = useState<PreviewMode>("desktop");
-  const [posterError, setPosterError] = useState(false);
   const [changeLog, setChangeLog] = useState<ChangeLogEntry[]>([]);
   const [showChanges, setShowChanges] = useState(false);
   const [showSocialSection, setShowSocialSection] = useState(
@@ -709,8 +708,6 @@ export default function ContactEditor({
                 alt=""
                 role="presentation"
                 className="absolute inset-0 w-full h-full object-cover"
-                onError={() => setPosterError(true)}
-                onLoad={() => setPosterError(false)}
               />
 
               {/* Overlay întunecat cu gradient */}

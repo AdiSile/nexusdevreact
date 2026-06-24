@@ -18,11 +18,6 @@ interface Particle {
   alphaSpeed: number;     // viteză pulsare
 }
 
-interface Connection {
-  a: number; // index particulă A
-  b: number; // index particulă B
-}
-
 /* ─────────────────────────────────────────────
    Configurație implicită
    ───────────────────────────────────────────── */

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback, type FormEvent } from "react";
-import { useRouter } from "next/navigation";
 
 /* ─────────────────────────────────────────────────────────
    Admin Page – Nexus Dev Studio
@@ -73,8 +72,6 @@ function removeToken(): void {
    ═══════════════════════════════════════════════ */
 
 export default function AdminPage() {
-  const router = useRouter();
-
   /* ── Stare autentificare ── */
   const [authState, setAuthState] = useState<AuthState>("checking");
 

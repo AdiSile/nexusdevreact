@@ -1,0 +1,203 @@
+app/admin/dashboard/components/ContactEditor.tsx(228,12): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+app/admin/dashboard/components/ContactEditor.tsx(230,12): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+app/admin/dashboard/components/ContactEditor.tsx(235,12): error TS4111: Property 'phone' comes from an index signature, so it must be accessed with ['phone'].
+app/admin/dashboard/components/ContactEditor.tsx(240,12): error TS4111: Property 'phone' comes from an index signature, so it must be accessed with ['phone'].
+app/admin/dashboard/components/ContactEditor.tsx(245,12): error TS4111: Property 'address' comes from an index signature, so it must be accessed with ['address'].
+app/admin/dashboard/components/ContactEditor.tsx(247,12): error TS4111: Property 'address' comes from an index signature, so it must be accessed with ['address'].
+app/admin/dashboard/components/ContactEditor.tsx(252,12): error TS4111: Property 'workingHours' comes from an index signature, so it must be accessed with ['workingHours'].
+app/admin/dashboard/components/ContactEditor.tsx(426,16): error TS2375: Type '{ children: Element; label: string; field: string; error: string | undefined; required: true; }' is not assignable to type '{ label: string; field: string; error?: string; required?: boolean; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/components/ContactEditor.tsx(429,31): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+app/admin/dashboard/components/ContactEditor.tsx(445,44): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+app/admin/dashboard/components/ContactEditor.tsx(447,30): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+app/admin/dashboard/components/ContactEditor.tsx(454,16): error TS2375: Type '{ children: Element; label: string; field: string; error: string | undefined; required: true; }' is not assignable to type '{ label: string; field: string; error?: string; required?: boolean; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/components/ContactEditor.tsx(457,31): error TS4111: Property 'phone' comes from an index signature, so it must be accessed with ['phone'].
+app/admin/dashboard/components/ContactEditor.tsx(472,44): error TS4111: Property 'phone' comes from an index signature, so it must be accessed with ['phone'].
+app/admin/dashboard/components/ContactEditor.tsx(474,30): error TS4111: Property 'phone' comes from an index signature, so it must be accessed with ['phone'].
+app/admin/dashboard/components/ContactEditor.tsx(482,14): error TS2375: Type '{ children: Element; label: string; field: string; error: string | undefined; required: true; }' is not assignable to type '{ label: string; field: string; error?: string; required?: boolean; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/components/ContactEditor.tsx(485,29): error TS4111: Property 'address' comes from an index signature, so it must be accessed with ['address'].
+app/admin/dashboard/components/ContactEditor.tsx(500,42): error TS4111: Property 'address' comes from an index signature, so it must be accessed with ['address'].
+app/admin/dashboard/components/ContactEditor.tsx(502,28): error TS4111: Property 'address' comes from an index signature, so it must be accessed with ['address'].
+app/admin/dashboard/components/ContactEditor.tsx(509,14): error TS2375: Type '{ children: Element; label: string; field: string; error: string | undefined; required: true; }' is not assignable to type '{ label: string; field: string; error?: string; required?: boolean; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/components/ContactEditor.tsx(512,29): error TS4111: Property 'workingHours' comes from an index signature, so it must be accessed with ['workingHours'].
+app/admin/dashboard/components/ContactEditor.tsx(527,42): error TS4111: Property 'workingHours' comes from an index signature, so it must be accessed with ['workingHours'].
+app/admin/dashboard/components/ContactEditor.tsx(529,28): error TS4111: Property 'workingHours' comes from an index signature, so it must be accessed with ['workingHours'].
+app/admin/dashboard/components/ContactEditor.tsx(584,28): error TS2375: Type '{ children: Element; key: SocialPlatform; label: string; field: string; error: string | undefined; }' is not assignable to type '{ label: string; field: string; error?: string; required?: boolean; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/page.tsx(601,33): error TS4111: Property 'name' comes from an index signature, so it must be accessed with ['name'].
+app/admin/dashboard/page.tsx(603,12): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+app/admin/dashboard/page.tsx(604,36): error TS4111: Property 'tagline' comes from an index signature, so it must be accessed with ['tagline'].
+app/admin/dashboard/page.tsx(630,12): error TS2375: Type '{ children: Element; label: string; field: string; error: string | undefined; }' is not assignable to type '{ label: string; field: string; error?: string; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/page.tsx(630,67): error TS4111: Property 'name' comes from an index signature, so it must be accessed with ['name'].
+app/admin/dashboard/page.tsx(651,10): error TS2375: Type '{ children: Element; label: string; field: string; error: string | undefined; }' is not assignable to type '{ label: string; field: string; error?: string; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/page.tsx(651,64): error TS4111: Property 'tagline' comes from an index signature, so it must be accessed with ['tagline'].
+app/admin/dashboard/page.tsx(679,12): error TS2375: Type '{ children: Element; label: string; field: string; error: string | undefined; }' is not assignable to type '{ label: string; field: string; error?: string; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/page.tsx(679,62): error TS4111: Property 'email' comes from an index signature, so it must be accessed with ['email'].
+app/admin/dashboard/page.tsx(823,34): error TS4111: Property 'title' comes from an index signature, so it must be accessed with ['title'].
+app/admin/dashboard/page.tsx(824,40): error TS4111: Property 'description' comes from an index signature, so it must be accessed with ['description'].
+app/admin/dashboard/page.tsx(844,8): error TS2375: Type '{ children: Element[]; label: string; field: string; error: string | undefined; }' is not assignable to type '{ label: string; field: string; error?: string; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/page.tsx(844,65): error TS4111: Property 'title' comes from an index signature, so it must be accessed with ['title'].
+app/admin/dashboard/page.tsx(856,8): error TS2375: Type '{ children: Element[]; label: string; field: string; error: string | undefined; }' is not assignable to type '{ label: string; field: string; error?: string; children: ReactNode; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'error' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+app/admin/dashboard/page.tsx(856,68): error TS4111: Property 'description' comes from an index signature, so it must be accessed with ['description'].
+app/admin/dashboard/page.tsx(985,9): error TS2322: Type '{ title: string; links?: { label: string; href: string; }[]; }' is not assignable to type 'FooterColumnData'.
+  Property 'links' is optional in type '{ title: string; links?: { label: string; href: string; }[]; }' but required in type 'FooterColumnData'.
+app/admin/dashboard/page.tsx(997,27): error TS2532: Object is possibly 'undefined'.
+app/admin/dashboard/page.tsx(998,9): error TS2322: Type '{ label?: string; href?: string; }' is not assignable to type '{ label: string; href: string; }'.
+  Property 'label' is optional in type '{ label?: string; href?: string; }' but required in type '{ label: string; href: string; }'.
+app/admin/dashboard/page.tsx(999,9): error TS2322: Type '{ links: { label: string; href: string; }[]; title?: string; }' is not assignable to type 'FooterColumnData'.
+  Property 'title' is optional in type '{ links: { label: string; href: string; }[]; title?: string; }' but required in type 'FooterColumnData'.
+app/admin/layout.tsx(219,14): error TS2375: Type '{ children: (false | "" | Element | undefined)[]; key: string; href: string; onClick: (() => void) | undefined; className: string; title: string | undefined; }' is not assignable to type 'InternalLinkProps' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'onClick' are incompatible.
+    Type '(() => void) | undefined' is not assignable to type 'MouseEventHandler<HTMLAnchorElement>'.
+      Type 'undefined' is not assignable to type 'MouseEventHandler<HTMLAnchorElement>'.
+app/admin/layout.tsx(323,3): error TS6133: 'sidebarOpen' is declared but its value is never read.
+app/admin/page.tsx(76,9): error TS6133: 'router' is declared but its value is never read.
+components/Particles.tsx(21,11): error TS6196: 'Connection' is declared but never used.
+lib/api.ts(19,19): error TS4111: Property 'API_BASE_URL' comes from an index signature, so it must be accessed with ['API_BASE_URL'].
+lib/api.ts(246,21): error TS4111: Property 'success' comes from an index signature, so it must be accessed with ['success'].
+lib/fallback.ts(127,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(181,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(235,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(289,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(343,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(397,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(451,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(505,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(559,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(613,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(667,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(721,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(775,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(829,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(883,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(937,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(991,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1045,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1099,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1153,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1207,9): error TS2375: Type '{ name: string; price: string; currency: string; interval: "per-project"; features: string[]; highlighted: false; ctaLabel: undefined; ctaHref: undefined; }' is not assignable to type 'ServicePricingTier' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'ctaLabel' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1247,5): error TS2375: Type '{ id: string; stepNumber: number; title: string; description: string; icon: string; imageUrl: undefined; duration: undefined; deliverables: undefined; tools: undefined; highlightColor: undefined; }' is not assignable to type 'ProcessStep' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'imageUrl' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1260,5): error TS2375: Type '{ id: string; stepNumber: number; title: string; description: string; icon: string; imageUrl: undefined; duration: undefined; deliverables: undefined; tools: undefined; highlightColor: undefined; }' is not assignable to type 'ProcessStep' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'imageUrl' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1273,5): error TS2375: Type '{ id: string; stepNumber: number; title: string; description: string; icon: string; imageUrl: undefined; duration: undefined; deliverables: undefined; tools: undefined; highlightColor: undefined; }' is not assignable to type 'ProcessStep' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'imageUrl' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1286,5): error TS2375: Type '{ id: string; stepNumber: number; title: string; description: string; icon: string; imageUrl: undefined; duration: undefined; deliverables: undefined; tools: undefined; highlightColor: undefined; }' is not assignable to type 'ProcessStep' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'imageUrl' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1299,5): error TS2375: Type '{ id: string; stepNumber: number; title: string; description: string; icon: string; imageUrl: undefined; duration: undefined; deliverables: undefined; tools: undefined; highlightColor: undefined; }' is not assignable to type 'ProcessStep' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'imageUrl' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1316,5): error TS2375: Type '{ id: string; question: string; answer: string; category: undefined; order: number; isActive: true; relatedServiceIds: undefined; }' is not assignable to type 'FAQItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'category' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1326,5): error TS2375: Type '{ id: string; question: string; answer: string; category: undefined; order: number; isActive: true; relatedServiceIds: undefined; }' is not assignable to type 'FAQItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'category' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1336,5): error TS2375: Type '{ id: string; question: string; answer: string; category: undefined; order: number; isActive: true; relatedServiceIds: undefined; }' is not assignable to type 'FAQItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'category' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1346,5): error TS2375: Type '{ id: string; question: string; answer: string; category: undefined; order: number; isActive: true; relatedServiceIds: undefined; }' is not assignable to type 'FAQItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'category' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1356,5): error TS2375: Type '{ id: string; question: string; answer: string; category: undefined; order: number; isActive: true; relatedServiceIds: undefined; }' is not assignable to type 'FAQItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'category' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1366,5): error TS2375: Type '{ id: string; question: string; answer: string; category: undefined; order: number; isActive: true; relatedServiceIds: undefined; }' is not assignable to type 'FAQItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'category' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1380,5): error TS2375: Type '{ id: string; slug: string; title: string; subtitle: undefined; description: string; challenge: undefined; solution: undefined; results: undefined; category: string; tags: string[]; media: { type: "image"; url: string; alt: string; }[]; ... 11 more ...; updatedAt: string; }' is not assignable to type 'PortfolioItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'subtitle' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1412,5): error TS2375: Type '{ id: string; slug: string; title: string; subtitle: undefined; description: string; challenge: undefined; solution: undefined; results: undefined; category: string; tags: string[]; media: { type: "image"; url: string; alt: string; }[]; ... 11 more ...; updatedAt: string; }' is not assignable to type 'PortfolioItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'subtitle' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1444,5): error TS2375: Type '{ id: string; slug: string; title: string; subtitle: undefined; description: string; challenge: undefined; solution: undefined; results: undefined; category: string; tags: string[]; media: { type: "image"; url: string; alt: string; }[]; ... 11 more ...; updatedAt: string; }' is not assignable to type 'PortfolioItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'subtitle' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1476,5): error TS2375: Type '{ id: string; slug: string; title: string; subtitle: undefined; description: string; challenge: undefined; solution: undefined; results: undefined; category: string; tags: string[]; media: { type: "image"; url: string; alt: string; }[]; ... 11 more ...; updatedAt: string; }' is not assignable to type 'PortfolioItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'subtitle' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1508,5): error TS2375: Type '{ id: string; slug: string; title: string; subtitle: undefined; description: string; challenge: undefined; solution: undefined; results: undefined; category: string; tags: string[]; media: { type: "image"; url: string; alt: string; }[]; ... 11 more ...; updatedAt: string; }' is not assignable to type 'PortfolioItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'subtitle' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1540,5): error TS2375: Type '{ id: string; slug: string; title: string; subtitle: undefined; description: string; challenge: undefined; solution: undefined; results: undefined; category: string; tags: string[]; media: { type: "image"; url: string; alt: string; }[]; ... 11 more ...; updatedAt: string; }' is not assignable to type 'PortfolioItem' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'subtitle' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+lib/fallback.ts(1629,3): error TS2375: Type '{ id: string; text: string; subtext: undefined; style: "highlight"; action: undefined; dismissible: true; expiresAt: string; isActive: true; pagesExclude: undefined; order: number; createdAt: string; updatedAt: string; }' is not assignable to type 'GlobalPromo' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'subtext' are incompatible.
+    Type 'undefined' is not assignable to type 'string'.
+

@@ -132,7 +132,6 @@ export default function AdminLayout({
         <TopBar
           currentPage={currentPage}
           onMenuToggle={toggleMobileMenu}
-          sidebarOpen={sidebarOpen}
         />
 
         {/* ── Conținut pagină ── */}
@@ -320,11 +319,9 @@ function SidebarContent({
 function TopBar({
   currentPage,
   onMenuToggle,
-  sidebarOpen,
 }: {
   currentPage: string;
   onMenuToggle: () => void;
-  sidebarOpen: boolean;
 }) {
   return (
     <header className="sticky top-0 z-20 h-16 bg-nexus-dark/80 backdrop-blur-xl border-b border-glass-border flex items-center px-4 sm:px-6 gap-4">
